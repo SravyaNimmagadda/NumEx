@@ -22,7 +22,7 @@ defmodule Polynomial do
    end
    
    def add(d, c) do
-        Enum.map(d, fn({x, y}) -> x + y end) ++ c
+        Enum.map(d, fn({x, y}) -> x + y end) ++ Enum.reverse(c)
         |> Enum.reverse
    end
 
@@ -33,7 +33,7 @@ defmodule Polynomial do
    end
    
    def sub(d, c) do
-        Enum.map(d,fn({x, y}) -> x - y end) ++ c
+        Enum.map(d,fn({x, y}) -> x - y end) ++ Enum.reverse(c)
         |> Enum.reverse
    end
 end
