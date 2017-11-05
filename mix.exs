@@ -11,7 +11,7 @@ defmodule NumEx.Mixfile do
 
       #Docs
       name: "NumEx",
-      source_url: "https://gitlab.com/MahathiVavilala/NumEx",
+      source_url: "https://gitlab.com/MahathiVavilala/numex",
       docs: [  main: "NumEx",
                extras: ["README.md"]
             ]

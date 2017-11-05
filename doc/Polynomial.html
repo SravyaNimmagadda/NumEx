@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>Decimal – NumEx v0.1.0</title>
+    <title>Polynomial – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
     <script src="dist/sidebar_items-52df44acc5.js"></script>
@@ -66,9 +66,9 @@
 
       <h1>
         <small class="visible-xs">NumEx v0.1.0</small>
-        Decimal
+        Polynomial
         
-          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -95,31 +95,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#abs/1">abs(n)</a>
+    <a href="#append/3">append(c, a, b)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#compare/2">compare(n, m)</a>
+    <a href="#polyadd/2">polyadd(a, b)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#compare_total/2">compare_total(n, m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#fma/3">fma(i, j, k)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#is_signed/1">is_signed(n)</a>
+    <a href="#take/3">take(c, l1, l2)</a>
   </div>
   
 </div>
@@ -143,17 +131,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="abs/1">
+          <div class="detail" id="append/3">
   
   
   <div class="detail-header">
-    <a href="#abs/1" class="detail-link" title="Link to this function">
+    <a href="#append/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">abs(n)</span>
+    <span class="signature">append(c, a, b)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -165,17 +153,17 @@
     
   </section>
 </div>
-<div class="detail" id="compare/2">
+<div class="detail" id="polyadd/2">
   
   
   <div class="detail-header">
-    <a href="#compare/2" class="detail-link" title="Link to this function">
+    <a href="#polyadd/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">compare(n, m)</span>
+    <span class="signature">polyadd(a, b)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L2" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -187,61 +175,17 @@
     
   </section>
 </div>
-<div class="detail" id="compare_total/2">
+<div class="detail" id="take/3">
   
   
   <div class="detail-header">
-    <a href="#compare_total/2" class="detail-link" title="Link to this function">
+    <a href="#take/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">compare_total(n, m)</span>
+    <span class="signature">take(c, l1, l2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L10" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="fma/3">
-  
-  
-  <div class="detail-header">
-    <a href="#fma/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">fma(i, j, k)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L25" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="is_signed/1">
-  
-  
-  <div class="detail-header">
-    <a href="#is_signed/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">is_signed(n)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L12" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
