@@ -77,4 +77,11 @@ defmodule Polynomial do
     polydiv(g, q++[p], tl(temprem))
   end
 
+  def polyder(a) do
+    degree = Enum.count(a) - 1
+    a |> Enum.with_index
+    |> Enum.map(fn({x, y}) -> x * (degree - y) end)
+    |> Enum.take(degree)
+  end
+
 end
