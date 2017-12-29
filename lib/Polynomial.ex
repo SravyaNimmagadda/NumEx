@@ -38,12 +38,12 @@ defmodule Polynomial do
    end
 
    def polymul(a, b) do
-     lna = Enum.count(a) - 1
-     lnb = Enum.count(b) - 1
-     n = lna + lnb + 1
+     degree1 = Enum.count(a) - 1
+     degree2 = Enum.count(b) - 1
+     n = degree1 + degree2 + 1
      result = List.duplicate(0, n)
 
-     resultpoly = for i <- 0..lna, j <- 0..lnb, do: List.update_at(result, i+j ,&(&1 + (Enum.at(a, i) * Enum.at(b, j))))
+     resultpoly = for i <- 0..degree1, j <- 0..degree2, do: List.update_at(result, i+j ,&(&1 + (Enum.at(a, i) * Enum.at(b, j))))
      resultpoly
      |> Enum.zip
      |> Enum.map(fn(x) -> Tuple.to_list(x) end)
