@@ -50,4 +50,31 @@ defmodule Polynomial do
      |> Enum.map(fn(x) -> Enum.sum(x) end)
 
     end
+
+  def polydiv(_, []), do: raise ArgumentError, "denominator is zero"
+
+  def polydiv(_, [0]), do: raise ArgumentError, "denominator is zero"
+
+  def polydiv(f, g) when length(f) < length(g), do: {[0], f}
+
+  def polydiv(f, g) do
+    {q, r} = polydiv(g, [], f)
+    if q == [], do: q = [0]
+    if r == [], do: r = [0]
+    {q, r}
+  end
+
+
+  defp polydiv(g, q, r) when length(r) < length(g), do: {q, r}
+
+  defp polydiv(g, q, r) do
+    p = div(hd(r), hd(g))
+    temprem = Enum.zip(r, g)
+         |> Enum.with_index
+         |> Enum.reduce(r, fn {{n, d}, i}, acc ->
+              List.replace_at(acc, i, n - p * d)
+            end)
+    polydiv(g, q++[p], tl(temprem))
+  end
+
 end
