@@ -16,11 +16,13 @@ defmodule Matrix do
     |> Enum.map(fn x -> x + :rand.uniform(6) end)
    end
   def zeros(row, col) do
-    List.duplicate(0, row * col)
+    List.duplicate(1, row)
+    |> Enum.map(fn x -> List.duplicate(1, col) end)
   end
 
   def ones(row, col) do
-    List.duplicate(1, row * col)
+    List.duplicate(1, row)
+    |> Enum.map(fn x -> List.duplicate(1, col) end)
   end
 
   def rowcount(a = [h | _]) do
