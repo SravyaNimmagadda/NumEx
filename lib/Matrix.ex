@@ -30,7 +30,7 @@ defmodule Matrix do
     Enum.count(a)
   end
 
-  def columncount([first_row | _]) when is_list(first_row) do
+  def columncount([first_row | _]) do
       Enum.count(first_row)
   end
 
@@ -38,7 +38,11 @@ defmodule Matrix do
     Enum.max([rowcount(a), columncount(a)])
   end
 
+  def identity(order) do
+    Enum.map(0..order-1, fn i -> for j <- 0..order-1, do: (if i==j, do: 1, else: 0) end)
+  end
 
+  #def eye(order), do: identity(order)
 
 
 end

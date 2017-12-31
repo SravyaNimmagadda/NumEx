@@ -84,4 +84,19 @@ defmodule Polynomial do
     |> Enum.take(degree)
   end
 
+  def quadraticroots(a, b, c) do
+    d = b * b - 4 * a * c
+    a2 = a * 2
+    {r1, r2} =
+    cond do
+      d > 0 ->
+        sd = :math.sqrt(d)
+        {(- b + sd) / a2, (- b - sd) / a2}
+      d == 0 ->
+        {- b / a2, - b / a2}
+      true ->
+        sd = :math.sqrt(-d)
+        {(- b / a2) + (sd / a2), (- b / a2) - (sd / a2)}
+    end
+  end
 end
