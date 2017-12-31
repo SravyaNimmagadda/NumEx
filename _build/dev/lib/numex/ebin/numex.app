@@ -2,8 +2,9 @@
              [{applications,[kernel,stdlib,elixir,logger,decimal]},
               {description,"numex"},
               {modules,['Elixir.Count','Elixir.Decimal','Elixir.Fraction',
-                        'Elixir.MathematicalFunc','Elixir.NumEx',
-                        'Elixir.Polynomial','Elixir.Shape','Elixir.Sort']},
+                        'Elixir.MathematicalFunc','Elixir.Matrix',
+                        'Elixir.NumEx','Elixir.Polynomial','Elixir.Shape',
+                        'Elixir.Sort']},
               {registered,[]},
               {vsn,"0.1.0"},
               {extra_applications,[logger]}]}.
