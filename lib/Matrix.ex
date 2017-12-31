@@ -15,6 +15,7 @@ defmodule Matrix do
     List.duplicate(0, col)
     |> Enum.map(fn x -> x + :rand.uniform(120) end)
    end
+
   def zeros(row, col) do
     List.duplicate(0, row * col)
   end
