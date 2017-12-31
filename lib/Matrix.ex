@@ -13,7 +13,7 @@ defmodule Matrix do
 
   def genrandrow(col) do
     List.duplicate(0, col)
-    |> Enum.map(fn x -> x + :rand.uniform(6) end)
+    |> Enum.map(fn x -> x + :rand.uniform(120) end)
    end
   def zeros(row, col) do
     List.duplicate(0, row * col)
