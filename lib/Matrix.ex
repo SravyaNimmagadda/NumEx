@@ -5,10 +5,16 @@ defmodule Matrix do
 
 #Yet to form the Matrix struc for rand
   def rand(row, col) do
-      List.duplicate(0, row * col)
-      |> Enum.map(fn x -> x + :rand.uniform(6) end)
+
+      List.duplicate(0, row)
+      |> Enum.map(fn x -> genrandrow(col) end)
+
   end
- #Yet to form the Matrix struc for rand
+
+  def genrandrow(col) do
+    List.duplicate(0, col)
+    |> Enum.map(fn x -> x + :rand.uniform(6) end)
+   end
   def zeros(row, col) do
     List.duplicate(0, row * col)
   end
@@ -28,7 +34,7 @@ defmodule Matrix do
   def size(a = [h | _]) when is_list(h) do
     Enum.max([rowcount(a), columncount(a)])
   end
-  
+
 
 
 
