@@ -1,14 +1,19 @@
 defmodule Matrix do
+  @moduledoc """
+  A module to count non_zeros
+  """
+  @doc """
+  Takes an Matrix and finds the maximum element from each row.
+      iex(1)>Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
+             [34, 5, 7]
+  """
   def max(h) when is_list(h)do
     Enum.map(h, fn x -> Enum.max(x) end)
   end
 
-#Yet to form the Matrix struc for rand
   def rand(row, col) do
-
       List.duplicate(0, row)
       |> Enum.map(fn x -> genrandrow(col) end)
-
   end
 
   def genrandrow(col) do
@@ -47,7 +52,5 @@ defmodule Matrix do
       if k > 0 and k < col, do: Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if j == i + k, do: 1, else: 0)end)
       if k < 0 and k > (-row), do: Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if i == j - k, do: 1, else: 0)end)
   end
-
-
 
 end
