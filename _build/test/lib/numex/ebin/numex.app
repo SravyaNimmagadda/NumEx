@@ -1,0 +1,10 @@
+{application,numex,
+             [{description,"numex"},
+              {modules,['Elixir.Count','Elixir.Decimal','Elixir.Fraction',
+                        'Elixir.MathematicalFunc','Elixir.Matrix',
+                        'Elixir.NumEx','Elixir.Polynomial','Elixir.Shape',
+                        'Elixir.Sort']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {applications,[kernel,stdlib,elixir,logger,complex_num]},
+              {extra_applications,[logger]}]}.

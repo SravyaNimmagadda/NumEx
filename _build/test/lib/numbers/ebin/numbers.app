@@ -1,0 +1,10 @@
+{application,numbers,
+             [{description,"Numbers dispatches on any numeric type that follows the `Numeric` behaviour.\nThis allows you to create composite types working with _any_ numeric type (Decimal, Ratio, Tensor, ???)!\n"},
+              {modules,['Elixir.Numbers',
+                        'Elixir.Numbers.AmbiguousOperandsError',
+                        'Elixir.Numbers.CannotCoerceError',
+                        'Elixir.Numbers.CannotConvertToFloatError',
+                        'Elixir.Numeric']},
+              {registered,[]},
+              {vsn,"2.0.3"},
+              {applications,[kernel,stdlib,elixir,logger]}]}.
