@@ -76,6 +76,11 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>A module to count non_zeros</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -121,6 +126,11 @@
   <div class="summary-signature">
     <a href="#max/1">max(h)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes an Matrix and finds the maximum element from each row.</p>
+<pre><code class="elixir">iex(1)&gt;Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
+       [34, 5, 7]</code></pre>
+</div>
   
 </div>
 <div class="summary-row">
@@ -183,7 +193,7 @@
     </a>
     <span class="signature">columncount(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -205,7 +215,7 @@
     </a>
     <span class="signature">eye(row, col, k)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L50" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -227,7 +237,7 @@
     </a>
     <span class="signature">genrandrow(col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -249,7 +259,7 @@
     </a>
     <span class="signature">identity(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -271,7 +281,7 @@
     </a>
     <span class="signature">max(h)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L10" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -280,7 +290,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes an Matrix and finds the maximum element from each row.</p>
+<pre><code class="elixir">iex(1)&gt;Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
+       [34, 5, 7]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="ones/2">
@@ -293,7 +306,7 @@
     </a>
     <span class="signature">ones(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L29" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -315,7 +328,7 @@
     </a>
     <span class="signature">rand(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -337,7 +350,7 @@
     </a>
     <span class="signature">rowcount(a)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -359,7 +372,7 @@
     </a>
     <span class="signature">size(a)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L42" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -381,7 +394,7 @@
     </a>
     <span class="signature">zeros(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L24" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
