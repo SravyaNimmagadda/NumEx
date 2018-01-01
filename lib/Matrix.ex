@@ -38,11 +38,18 @@ defmodule Matrix do
     Enum.max([rowcount(a), columncount(a)])
   end
 
-  def identity(order) do
-    Enum.map(0..order-1, fn i -> for j <- 0..order-1, do: (if i==j, do: 1, else: 0) end)
+  def identity(row, col) do
+    Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if i==j, do: 1, else: 0) end)
   end
 
-  #def eye(order), do: identity(order)
+#  def eye(row, col, k), do
+#      order = max(row,col)
+#      if k == 0, do: identity(order))
+#      if k > 0 and k < order , do:
+#      if k < 0 and k > (-order), do:
+#  end
+end
+
 
 
 end
