@@ -3,8 +3,9 @@ defmodule Matrix do
   A module to count non_zeros
   """
   @doc """
-  Takes an Matrix and finds the maximum element from each row.
-      iex(1)>Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
+  Takes a Matrix and finds the maximum element from each row.
+  
+      iex>Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
              [34, 5, 7]
   """
   def max(h) when is_list(h)do

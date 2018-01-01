@@ -3,6 +3,6 @@ defmodule NumExTest do
   doctest NumEx
 
   test "greets the world" do
-    assert NumEx.hello() == :world
+    #assert NumEx.hello() == :world
   end
 end

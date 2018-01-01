@@ -4,7 +4,8 @@ defmodule Count do
   """
   @doc """
   Takes an enumerable and counts all non-zero elements from it.
-      iex(1)> Count.count_nonzero([1,0,9,0,3,0,5])
+  
+      iex> Count.count_nonzero([1,0,9,0,3,0,5])
       4
   """
   def count_nonzero(l) do

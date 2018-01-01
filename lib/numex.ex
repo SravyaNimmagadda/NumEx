@@ -1,18 +1,10 @@
 defmodule NumEx do
   @moduledoc """
   Documentation for NumEx.
-  """
 
-  @doc """
-  Hello world.
+  This is an effort to try and replicate the Python's NumPy Packages.
 
-  ## Examples
-
-      iex> NumEx.hello
-      :world
 
   """
-  def hello do
-    :world
-  end
+
 end
