@@ -1,4 +1,4 @@
-defmodule Sort do
+defmodule Search do
   def extract([]), do: []
 
 
