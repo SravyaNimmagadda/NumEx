@@ -1,6 +1,6 @@
 defmodule Matrix do
   @moduledoc """
-  A module to count non_zeros
+  A module to perform Matrix Operations
   """
   @doc """
   Takes a Matrix and finds the maximum element from each row.
