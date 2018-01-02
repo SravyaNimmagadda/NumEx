@@ -102,6 +102,7 @@ defmodule Matrix do
   Takes three numerals 'row', 'col', 'k' and returns eye matrix of the given order.
 
       iex> Matrix.eye(4,3,0)
+      [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0]]
 
   """
   def eye(row, col, k) do
