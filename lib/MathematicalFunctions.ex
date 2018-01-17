@@ -5,6 +5,8 @@ defmodule MathematicalFunc do
   @doc """
   Takes a list of elements and computes the sine function element wise .
 
+  ##Examples
+  
       iex>MathematicalFunc.sin([1,2,34,4,5])
 
   """
