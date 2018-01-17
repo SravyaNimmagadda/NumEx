@@ -1,5 +1,4 @@
 defmodule Decimal do
-
   @moduledoc """
   A module to perform operations on decimal values
   """
@@ -86,4 +85,5 @@ defmodule Decimal do
   def fma(i, j, k) do
   i * j + k
   end
+
 end

@@ -1,13 +1,13 @@
 defmodule Poly1d do
-  def main(a, b) do
+  defp main(a, b) do
      lena = Enum.count(a)
      lenb = Enum.count(b)
      condition(a, b,lena, lenb)
   end
 
-  def take(c, len1, len2), do: Enum.take(c, len1-len2)
+  defp take(c, len1, len2), do: Enum.take(c, len1-len2)
 
-  def condition(a, b, lena, lenb) do
+  defp condition(a, b, lena, lenb) do
      cond  do
        lena > lenb -> take(a, lena, lenb)
        lenb > lena -> take(b, lenb, lena)
@@ -21,7 +21,7 @@ defmodule Poly1d do
      add(list1, list2)
   end
 
-  def add(d, c) do
+  defp add(d, c) do
         Enum.map(d, fn({x, y}) -> x + y end) ++ Enum.reverse(c)
         |> Enum.reverse
   end
@@ -32,7 +32,7 @@ defmodule Poly1d do
      sub(list1, list2)
   end
 
-  def sub(d, c) do
+  defp sub(d, c) do
         Enum.map(d,fn({x, y}) -> x - y end) ++ Enum.reverse(c)
         |> Enum.reverse
   end

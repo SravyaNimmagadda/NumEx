@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-293eb62abf.js
+dist/sidebar_items-3c54e4be57.js
 api-reference.html
 readme.html
 search.html
@@ -17,8 +17,8 @@ Logic.html
 MathematicalFunc.html
 Matrix.html
 NumEx.html
+Poly1d.html
 Polynomial.html
 SetRoutines.html
-Shape.html
 Sort.html
 index.html

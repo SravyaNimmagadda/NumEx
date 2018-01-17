@@ -4,7 +4,7 @@
                         'Elixir.Fraction','Elixir.Logic',
                         'Elixir.MathematicalFunc','Elixir.Matrix',
                         'Elixir.NumEx','Elixir.Poly1d','Elixir.Polynomial',
-                        'Elixir.SetRoutines','Elixir.Shape','Elixir.Sort']},
+                        'Elixir.SetRoutines','Elixir.Sort']},
               {registered,[]},
               {vsn,"0.1.0"},
               {applications,[kernel,stdlib,elixir,logger,complex_num]},

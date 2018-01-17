@@ -53,5 +53,8 @@ def flcm([a, b], [c, d]) do
   Fraction.new( Kernel.div((x.numerator * y.numerator), Integer.gcd(x.numerator, y.numerator)), Integer.gcd(x.denominator , y.denominator))
 end
 
-
+def frac_to_dec([a, b]) do
+  x = Fraction.new(a, b);
+  dec = a / b
+end
 end
