@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-c04791fed1.js
+dist/sidebar_items-046542cc20.js
 api-reference.html
 readme.html
 search.html
@@ -12,6 +12,7 @@ search.html
 Count.html
 Decimal.html
 Fraction.html
+Logic.html
 MathematicalFunc.html
 Matrix.html
 NumEx.html
