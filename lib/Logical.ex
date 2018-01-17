@@ -1,3 +1,3 @@
 defmodule Logic do
-
+  
 end
