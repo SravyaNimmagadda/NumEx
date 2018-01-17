@@ -1,4 +1,4 @@
-defmodule Polynomial do
+defmodule Poly1d do
   def main(a, b) do
      lena = Enum.count(a)
      lenb = Enum.count(b)
@@ -50,8 +50,6 @@ defmodule Polynomial do
      |> Enum.map(fn(x) -> Enum.sum(x) end)
   end
 
-  def polymulx(poly, x), do: Enum.map(poly, fn(m) -> m * x end)
-
   def polydiv(_, []), do: raise ArgumentError, "denominator is zero"
   def polydiv(_, [0]), do: raise ArgumentError, "denominator is zero"
   def polydiv(f, g) when length(f) < length(g), do: {[0], f}
@@ -78,11 +76,6 @@ defmodule Polynomial do
     |> Enum.map(fn({x, y}) -> x * (degree - y) end)
     |> Enum.take(degree)
   end
-
-  def polypow(polynomial, power) do
-    Enum.map(polynomial, fn(x) -> round(:math.pow(x, power)) end)
-  end
-
 
   def quadraticroots(a, b, c) do
     d = b * b - 4 * a * c
