@@ -1,7 +1,13 @@
 defmodule Logic do
 
+  @moduledoc """
+  A module to perform Logical operations on enumerables
+  """
+
   @doc """
   Takes two arrays and performs logical and operation for the corresponding elements in each array
+
+
       iex> Logic.logical_or([false, false, true, true],[false, true, false, true])
       [false, true, true, true]
       iex> Logic.logical_or([-1, 1, 2, 10],[0, 1, 0, 4])
@@ -15,6 +21,8 @@ defmodule Logic do
 
   @doc """
   Takes two arrays and performs logical or operation for the corresponding elements in each array
+
+
       iex> Logic.logical_and([false, false, true, true],[false, true, false, true])
       [false, false, false, true]
       iex> Logic.logical_and([-1, 1, 2, 10],[0, 1, 0, 4])
@@ -29,6 +37,8 @@ defmodule Logic do
 
   @doc """
   Takes an array and performs logical not operation on every induvidual element present in it
+
+
       iex(42)> Logic.logical_not([true, false])
       [false, true]
 
@@ -39,6 +49,8 @@ defmodule Logic do
 
   @doc """
   Takes two arrays and performs logical xor operation for the corresponding elements in each array
+
+
       iex(46)> Logic.logical_xor([false, false, true, true],[false, true, false, true])
       [false, true, true, false]
   """
