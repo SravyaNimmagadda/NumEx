@@ -53,10 +53,10 @@ defmodule Decimal do
 
   @doc """
   Takes a Decimal value and returns its absolute value
-     iex(59)> Decimal.abs(15)
-     15
-     iex(60)> Decimal.abs(-32)
-     32
+      iex> Decimal.abs(15)
+      15
+      iex> Decimal.abs(-32)
+      32
   """
   def abs(n) do
       if n < 0 do  -n
