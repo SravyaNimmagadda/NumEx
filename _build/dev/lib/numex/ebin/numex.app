@@ -3,7 +3,7 @@
               {modules,['Elixir.Binary','Elixir.Count','Elixir.Decimal',
                         'Elixir.Fraction','Elixir.Logic',
                         'Elixir.MathematicalFunc','Elixir.Matrix',
-                        'Elixir.NumEx','Elixir.Polynomial','Elixir.Search',
+                        'Elixir.NumEx','Elixir.Polynomial',
                         'Elixir.SetRoutines','Elixir.Shape','Elixir.Sort']},
               {registered,[]},
               {vsn,"0.1.0"},
