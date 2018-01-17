@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>Polynomial – NumEx v0.1.0</title>
+    <title>Binary – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
     <script src="dist/sidebar_items-84aa4f1dd2.js"></script>
@@ -66,9 +66,9 @@
 
       <h1>
         <small class="visible-xs">NumEx v0.1.0</small>
-        Polynomial
+        Binary
         
-          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -95,67 +95,43 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#add/2">add(d, c)</a>
+    <a href="#binary_repr/1">binary_repr(x)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#condition/4">condition(a, b, lena, lenb)</a>
+    <a href="#bitwise_add/2">bitwise_add(arr1, arr2)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#main/2">main(a, b)</a>
+    <a href="#bitwise_or/2">bitwise_or(arr1, arr2)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#polyadd/2">polyadd(a, b)</a>
+    <a href="#bitwise_xor/2">bitwise_xor(arr1, arr2)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#polyder/1">polyder(a)</a>
+    <a href="#invert/1">invert(arr1)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#polydiv/2">polydiv(f, g)</a>
+    <a href="#left_shift/2">left_shift(x, y)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#polymul/2">polymul(a, b)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#polysub/2">polysub(a, b)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#quadraticroots/3">quadraticroots(a, b, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#sub/2">sub(d, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#take/3">take(c, len1, len2)</a>
+    <a href="#right_shift/2">right_shift(x, y)</a>
   </div>
   
 </div>
@@ -179,17 +155,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="add/2">
+          <div class="detail" id="binary_repr/1">
   
   
   <div class="detail-header">
-    <a href="#add/2" class="detail-link" title="Link to this function">
+    <a href="#binary_repr/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">add(d, c)</span>
+    <span class="signature">binary_repr(x)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L26" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -201,17 +177,17 @@
     
   </section>
 </div>
-<div class="detail" id="condition/4">
+<div class="detail" id="bitwise_add/2">
   
   
   <div class="detail-header">
-    <a href="#condition/4" class="detail-link" title="Link to this function">
+    <a href="#bitwise_add/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">condition(a, b, lena, lenb)</span>
+    <span class="signature">bitwise_add(arr1, arr2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L3" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -223,17 +199,17 @@
     
   </section>
 </div>
-<div class="detail" id="main/2">
+<div class="detail" id="bitwise_or/2">
   
   
   <div class="detail-header">
-    <a href="#main/2" class="detail-link" title="Link to this function">
+    <a href="#bitwise_or/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">main(a, b)</span>
+    <span class="signature">bitwise_or(arr1, arr2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L7" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -245,17 +221,17 @@
     
   </section>
 </div>
-<div class="detail" id="polyadd/2">
+<div class="detail" id="bitwise_xor/2">
   
   
   <div class="detail-header">
-    <a href="#polyadd/2" class="detail-link" title="Link to this function">
+    <a href="#bitwise_xor/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">polyadd(a, b)</span>
+    <span class="signature">bitwise_xor(arr1, arr2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L11" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -267,17 +243,17 @@
     
   </section>
 </div>
-<div class="detail" id="polyder/1">
+<div class="detail" id="invert/1">
   
   
   <div class="detail-header">
-    <a href="#polyder/1" class="detail-link" title="Link to this function">
+    <a href="#invert/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">polyder(a)</span>
+    <span class="signature">invert(arr1)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L15" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -289,17 +265,17 @@
     
   </section>
 </div>
-<div class="detail" id="polydiv/2">
+<div class="detail" id="left_shift/2">
   
   
   <div class="detail-header">
-    <a href="#polydiv/2" class="detail-link" title="Link to this function">
+    <a href="#left_shift/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">polydiv(f, g)</span>
+    <span class="signature">left_shift(x, y)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -311,105 +287,17 @@
     
   </section>
 </div>
-<div class="detail" id="polymul/2">
+<div class="detail" id="right_shift/2">
   
   
   <div class="detail-header">
-    <a href="#polymul/2" class="detail-link" title="Link to this function">
+    <a href="#right_shift/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">polymul(a, b)</span>
+    <span class="signature">right_shift(x, y)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L40" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="polysub/2">
-  
-  
-  <div class="detail-header">
-    <a href="#polysub/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">polysub(a, b)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L29" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="quadraticroots/3">
-  
-  
-  <div class="detail-header">
-    <a href="#quadraticroots/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">quadraticroots(a, b, c)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L87" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="sub/2">
-  
-  
-  <div class="detail-header">
-    <a href="#sub/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">sub(d, c)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L35" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="take/3">
-  
-  
-  <div class="detail-header">
-    <a href="#take/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">take(c, len1, len2)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
