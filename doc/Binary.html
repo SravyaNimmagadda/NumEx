@@ -8,7 +8,7 @@
     <title>Binary – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-84aa4f1dd2.js"></script>
+    <script src="dist/sidebar_items-8b328e6067.js"></script>
     
     
     
@@ -68,13 +68,18 @@
         <small class="visible-xs">NumEx v0.1.0</small>
         Binary
         
-          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>A module to perform binary operations on enumerables</p>
+
+        </section>
       
 
       
@@ -98,11 +103,21 @@
     <a href="#binary_repr/1">binary_repr(x)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes an Integer, returns its binary representation.
+iex&gt;Binary.binary_repr(5)
+101</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#bitwise_add/2">bitwise_add(arr1, arr2)</a>
+    <a href="#bitwise_and/2">bitwise_and(arr1, arr2)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_and on them, element_wise.
+iex&gt; Binary.bitwise_and([2,3,4],[4,5,6])
+[0, 1, 4]</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -110,11 +125,21 @@
     <a href="#bitwise_or/2">bitwise_or(arr1, arr2)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_or on them, element_wise.
+iex&gt; Binary.bitwise_or([2,3,4],[4,5,6])
+[6, 7, 6]</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#bitwise_xor/2">bitwise_xor(arr1, arr2)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_or on them, element_wise.
+iex&gt; Binary.bitwise_xor([2,3,4],[4,5,6])
+[6, 6, 2]</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -122,17 +147,32 @@
     <a href="#invert/1">invert(arr1)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes an  enumerable, performs bitwise_not on its elements.
+iex&gt;  Binary.invert([32, 5, 1])
+[-33, -6, -2]</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#left_shift/2">left_shift(x, y)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes two values, performs arithmetic left shift on them.
+iex&gt; Binary.left_shift(2,[4,5,6])
+[32, 64, 128]</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#right_shift/2">right_shift(x, y)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes two values, performs arithmetic right shift on them.
+iex&gt; Binary.right_shift(32,[4,5,6])
+[2, 1, 0]</p>
+</div>
   
 </div>
 
@@ -165,7 +205,7 @@
     </a>
     <span class="signature">binary_repr(x)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L64" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -174,20 +214,23 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes an Integer, returns its binary representation.
+iex&gt;Binary.binary_repr(5)
+101</p>
+
   </section>
 </div>
-<div class="detail" id="bitwise_add/2">
+<div class="detail" id="bitwise_and/2">
   
   
   <div class="detail-header">
-    <a href="#bitwise_add/2" class="detail-link" title="Link to this function">
+    <a href="#bitwise_and/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">bitwise_add(arr1, arr2)</span>
+    <span class="signature">bitwise_and(arr1, arr2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L11" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -196,7 +239,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes an two enumerables, performs bitwise_and on them, element_wise.
+iex&gt; Binary.bitwise_and([2,3,4],[4,5,6])
+[0, 1, 4]</p>
+
   </section>
 </div>
 <div class="detail" id="bitwise_or/2">
@@ -209,7 +255,7 @@
     </a>
     <span class="signature">bitwise_or(arr1, arr2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -218,7 +264,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes an two enumerables, performs bitwise_or on them, element_wise.
+iex&gt; Binary.bitwise_or([2,3,4],[4,5,6])
+[6, 7, 6]</p>
+
   </section>
 </div>
 <div class="detail" id="bitwise_xor/2">
@@ -231,7 +280,7 @@
     </a>
     <span class="signature">bitwise_xor(arr1, arr2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L29" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -240,7 +289,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes an two enumerables, performs bitwise_or on them, element_wise.
+iex&gt; Binary.bitwise_xor([2,3,4],[4,5,6])
+[6, 6, 2]</p>
+
   </section>
 </div>
 <div class="detail" id="invert/1">
@@ -253,7 +305,7 @@
     </a>
     <span class="signature">invert(arr1)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -262,7 +314,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes an  enumerable, performs bitwise_not on its elements.
+iex&gt;  Binary.invert([32, 5, 1])
+[-33, -6, -2]</p>
+
   </section>
 </div>
 <div class="detail" id="left_shift/2">
@@ -275,7 +330,7 @@
     </a>
     <span class="signature">left_shift(x, y)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L49" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -284,7 +339,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes two values, performs arithmetic left shift on them.
+iex&gt; Binary.left_shift(2,[4,5,6])
+[32, 64, 128]</p>
+
   </section>
 </div>
 <div class="detail" id="right_shift/2">
@@ -297,7 +355,7 @@
     </a>
     <span class="signature">right_shift(x, y)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Bitwise.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Bitwise.ex#L58" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -306,7 +364,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes two values, performs arithmetic right shift on them.
+iex&gt; Binary.right_shift(32,[4,5,6])
+[2, 1, 0]</p>
+
   </section>
 </div>
 
