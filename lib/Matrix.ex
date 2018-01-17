@@ -103,12 +103,14 @@ defmodule Matrix do
 
       iex> Matrix.eye(4,3,0)
       [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0]]
+      iex> Matrix.eye(3, 3, -1)
+      [[0, 0, 0], [1, 0, 0], [0, 1, 0]]
 
   """
   def eye(row, col, k) do
       if k == 0, do: identity(row, col)
-      if k > 0 and k < col, do: Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if j == i + k, do: 1, else: 0)end)
-      if k < 0 and k > (-row), do: Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if i == j - k, do: 1, else: 0)end)
+      if k > -col and k < col, do: Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if j == i + k, do: 1, else: 0)end)
+
   end
 
 end
