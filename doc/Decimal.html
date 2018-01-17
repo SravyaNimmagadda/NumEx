@@ -8,7 +8,7 @@
     <title>Decimal – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-8b328e6067.js"></script>
+    <script src="dist/sidebar_items-c93a64fd79.js"></script>
     
     
     
@@ -68,7 +68,7 @@
         <small class="visible-xs">NumEx v0.1.0</small>
         Decimal
         
-          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Decimal.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -98,11 +98,28 @@
     <a href="#abs/1">abs(n)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes a Decimal value and returns its absolute value
+   iex(59)&gt; Decimal.abs(15)
+   15
+   iex(60)&gt; Decimal.abs(-32)
+   32</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#compare/2">compare(n, m)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
+“1” if it is greater and “0” if the elements are equal</p>
+<pre><code class="iex elixir">iex&gt; Decimal.compare(1, 5)
+-1
+iex&gt; Decimal.compare(1, -5)
+1
+iex&gt; Decimal.compare(4, 4)
+0</code></pre>
+</div>
   
 </div>
 <div class="summary-row">
@@ -110,17 +127,43 @@
     <a href="#compare_total/2">compare_total(n, m)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
+“1” if it is greater and “0” if the elements are equal. However it helps comparing values like 1 and 1.0</p>
+<pre><code class="iex elixir">iex&gt; Decimal.compare_total(1, 5)
+-1
+iex&gt; Decimal.compare_total(1, -5)
+1
+iex&gt; Decimal.compare_total(4, 4)
+0
+iex&gt; Decimal.compare_total(1, 1.0)
+-1</code></pre>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#fma/3">fma(i, j, k)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes three decimal values and performs fast multiplication and addition i.e,
+for the arguments i, j, k the function returns the value i * j + k</p>
+<pre><code class="iex elixir">iex&gt; Decimal.fma(2, 3, -5)</code></pre>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#is_signed/1">is_signed(n)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes a Decimal value and returns if the value is signed</p>
+<pre><code class="iex elixir">iex&gt; Decimal.is_signed(10)
+false
+iex&gt; Decimal.is_signed(-10)
+true
+iex&gt; Decimal.is_signed(0)
+false</code></pre>
+</div>
   
 </div>
 
@@ -153,7 +196,7 @@
     </a>
     <span class="signature">abs(n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Decimal.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L61" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -162,7 +205,12 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes a Decimal value and returns its absolute value
+   iex(59)&gt; Decimal.abs(15)
+   15
+   iex(60)&gt; Decimal.abs(-32)
+   32</p>
+
   </section>
 </div>
 <div class="detail" id="compare/2">
@@ -175,7 +223,7 @@
     </a>
     <span class="signature">compare(n, m)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Decimal.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -184,7 +232,15 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
+“1” if it is greater and “0” if the elements are equal</p>
+<pre><code class="iex elixir">iex&gt; Decimal.compare(1, 5)
+-1
+iex&gt; Decimal.compare(1, -5)
+1
+iex&gt; Decimal.compare(4, 4)
+0</code></pre>
+
   </section>
 </div>
 <div class="detail" id="compare_total/2">
@@ -197,7 +253,7 @@
     </a>
     <span class="signature">compare_total(n, m)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Decimal.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -206,7 +262,17 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
+“1” if it is greater and “0” if the elements are equal. However it helps comparing values like 1 and 1.0</p>
+<pre><code class="iex elixir">iex&gt; Decimal.compare_total(1, 5)
+-1
+iex&gt; Decimal.compare_total(1, -5)
+1
+iex&gt; Decimal.compare_total(4, 4)
+0
+iex&gt; Decimal.compare_total(1, 1.0)
+-1</code></pre>
+
   </section>
 </div>
 <div class="detail" id="fma/3">
@@ -219,7 +285,7 @@
     </a>
     <span class="signature">fma(i, j, k)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Decimal.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L72" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -228,7 +294,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes three decimal values and performs fast multiplication and addition i.e,
+for the arguments i, j, k the function returns the value i * j + k</p>
+<pre><code class="iex elixir">iex&gt; Decimal.fma(2, 3, -5)</code></pre>
+
   </section>
 </div>
 <div class="detail" id="is_signed/1">
@@ -241,7 +310,7 @@
     </a>
     <span class="signature">is_signed(n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Decimal.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Decimal.ex#L52" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -250,7 +319,14 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes a Decimal value and returns if the value is signed</p>
+<pre><code class="iex elixir">iex&gt; Decimal.is_signed(10)
+false
+iex&gt; Decimal.is_signed(-10)
+true
+iex&gt; Decimal.is_signed(0)
+false</code></pre>
+
   </section>
 </div>
 
