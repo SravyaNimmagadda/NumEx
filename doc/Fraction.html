@@ -76,6 +76,11 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>A module to perform various operations on Fractions.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -98,11 +103,17 @@
     <a href="#add/2">add(list1, list2)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the sum of two Fractions</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#fdiv/2">fdiv(list1, list2)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the quotient of two Fractions</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -110,11 +121,17 @@
     <a href="#fgcd/2">fgcd(list1, list2)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the GCD(greatest common divisor) of two Fractions</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#flcm/2">flcm(list1, list2)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the LCM(least common multiple) of two Fractions</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -122,11 +139,17 @@
     <a href="#frac_to_dec/1">frac_to_dec(list)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the decimal value of a given fraction</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#mul/2">mul(list1, list2)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the product of two Fractions</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -134,11 +157,17 @@
     <a href="#new/1">new(x)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Gives a fration structure to a value</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#new/2">new(x, y)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Gives a fration structure to a value</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -146,11 +175,17 @@
     <a href="#reciprocal/1">reciprocal(list)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the reciprocal of a Fraction</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#sub/2">sub(list1, list2)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the difference of two Fractions</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -158,11 +193,17 @@
     <a href="#to_improper/3">to_improper(x, y, z)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Converts a mixed fraction to an improper fraction</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#to_mixed/2">to_mixed(x, y)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Converts an improper fraction to a mixed fraction</p>
+</div>
   
 </div>
 
@@ -195,7 +236,7 @@
     </a>
     <span class="signature">add(list1, list2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L68" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -204,7 +245,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the sum of two Fractions</p>
+<pre><code class="iex elixir">iex&gt; Fraction.add([2,3],[1,2])
+%Fraction{denominator: 6, numerator: 7}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="fdiv/2">
@@ -217,7 +261,7 @@
     </a>
     <span class="signature">fdiv(list1, list2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L115" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -226,7 +270,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the quotient of two Fractions</p>
+<pre><code class="iex elixir">iex&gt; Fraction.fdiv([1,2], [3,4])
+%Fraction{denominator: 6, numerator: 4}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="fgcd/2">
@@ -239,7 +286,7 @@
     </a>
     <span class="signature">fgcd(list1, list2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L146" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -248,7 +295,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the GCD(greatest common divisor) of two Fractions</p>
+<pre><code class="iex elixir">iex&gt; Fraction.fgcd([3,4], [1,2])
+%Fraction{denominator: 4, numerator: 1}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="flcm/2">
@@ -261,7 +311,7 @@
     </a>
     <span class="signature">flcm(list1, list2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L162" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -270,7 +320,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the LCM(least common multiple) of two Fractions</p>
+<pre><code class="iex elixir">iex&gt; Fraction.flcm([3,4], [1,2])
+%Fraction{denominator: 2, numerator: 3}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="frac_to_dec/1">
@@ -283,7 +336,7 @@
     </a>
     <span class="signature">frac_to_dec(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L179" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -292,7 +345,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the decimal value of a given fraction</p>
+<pre><code class="iex elixir">iex&gt; Fraction.frac_to_dec([7, 2])
+3.5</code></pre>
+
   </section>
 </div>
 <div class="detail" id="mul/2">
@@ -305,7 +361,7 @@
     </a>
     <span class="signature">mul(list1, list2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L99" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -314,7 +370,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the product of two Fractions</p>
+<pre><code class="iex elixir">iex&gt; Fraction.mul([1,2], [3,4])
+%Fraction{denominator: 8, numerator: 3}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="new/1">
@@ -327,7 +386,7 @@
     </a>
     <span class="signature">new(x)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -336,7 +395,12 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Gives a fration structure to a value.</p>
+<pre><code class="iex elixir">iex&gt; Fraction.new(15)
+%Fraction{denominator: 1, numerator: 15}
+iex&gt; Fraction.new(-3)
+%Fraction{denominator: 1, numerator: -3}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="new/2">
@@ -349,7 +413,7 @@
     </a>
     <span class="signature">new(x, y)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -358,7 +422,12 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Gives a fration structure to a value.</p>
+<pre><code class="iex elixir">iex&gt; Fraction.new(15, 7)
+%Fraction{denominator: 7, numerator: 15}
+iex&gt; Fraction.new(-3, 4)
+%Fraction{denominator: 4, numerator: -3}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="reciprocal/1">
@@ -371,7 +440,7 @@
     </a>
     <span class="signature">reciprocal(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L132" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -380,7 +449,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the reciprocal of a Fraction</p>
+<pre><code class="iex elixir">iex&gt; Fraction.reciprocal([3,4])
+%Fraction{denominator: 3, numerator: 4}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="sub/2">
@@ -393,7 +465,7 @@
     </a>
     <span class="signature">sub(list1, list2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L84" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -402,7 +474,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the difference of two Fractions</p>
+<pre><code class="iex elixir">iex&gt; Fraction.sub([2,3],[1,2])
+%Fraction{denominator: 6, numerator: 1}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="to_improper/3">
@@ -415,7 +490,7 @@
     </a>
     <span class="signature">to_improper(x, y, z)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L41" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -424,7 +499,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Converts a mixed fraction to an improper fraction</p>
+<pre><code class="iex elixir">iex&gt; Fraction.to_improper(5, 1, 2)
+%Fraction{denominator: 2, numerator: 11}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="to_mixed/2">
@@ -437,7 +515,7 @@
     </a>
     <span class="signature">to_mixed(x, y)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Fraction.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -446,7 +524,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Converts an improper fraction to a mixed fraction</p>
+<pre><code class="iex elixir">iex&gt; Fraction.to_mixed(11, 2)
+{5, %Fraction{denominator: 2, numerator: 1}}</code></pre>
+
   </section>
 </div>
 
