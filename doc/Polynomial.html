@@ -8,7 +8,7 @@
     <title>Polynomial – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-f58e6a1476.js"></script>
+    <script src="dist/sidebar_items-b96ce5a902.js"></script>
     
     
     
@@ -68,13 +68,18 @@
         <small class="visible-xs">NumEx v0.1.0</small>
         Polynomial
         
-          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>A module to perform various operations on Polynomials.</p>
+
+        </section>
       
 
       
@@ -98,11 +103,17 @@
     <a href="#polyadd/2">polyadd(a, b)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the sum of two Polynomials</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#polyder/1">polyder(a)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the derivative of the given Polynomial</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -110,11 +121,17 @@
     <a href="#polydiv/2">polydiv(f, g)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the quotient and remainder of two Polynomials</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#polymul/2">polymul(a, b)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the product of two Polynomials</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -122,11 +139,17 @@
     <a href="#polymulx/2">polymulx(poly, x)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the Polynomial multiplied with a given coefficient</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#polypow/2">polypow(polynomial, power)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns the the coefficients of the polynomial raised to the given power</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -134,11 +157,8 @@
     <a href="#polysub/2">polysub(a, b)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns the difference of two Polynomials</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#quadraticroots/3">quadraticroots(a, b, c)</a>
-  </div>
   
 </div>
 
@@ -171,7 +191,7 @@
     </a>
     <span class="signature">polyadd(a, b)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -180,7 +200,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the sum of two Polynomials</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polyadd([2, 3, 7], [1, 5])
+[2, 4, 12]iex&gt; Fraction.new(15)</code></pre>
+
   </section>
 </div>
 <div class="detail" id="polyder/1">
@@ -193,7 +216,7 @@
     </a>
     <span class="signature">polyder(a)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L131" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -202,7 +225,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the derivative of the given Polynomial</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polyder([6, -1, 3, 2])
+[18, -2, 3]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="polydiv/2">
@@ -215,7 +241,7 @@
     </a>
     <span class="signature">polydiv(f, g)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L105" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -224,7 +250,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the quotient and remainder of two Polynomials</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polydiv([4, 5, 2], [2, 1])
+{[2, 1], [1]}</code></pre>
+
   </section>
 </div>
 <div class="detail" id="polymul/2">
@@ -237,7 +266,7 @@
     </a>
     <span class="signature">polymul(a, b)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L70" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -246,7 +275,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the product of two Polynomials</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polymul([5, 1, 3], [-1, 2])
+[-5, 9, -1, 6]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="polymulx/2">
@@ -259,7 +291,7 @@
     </a>
     <span class="signature">polymulx(poly, x)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L91" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -268,7 +300,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the Polynomial multiplied with a given coefficient</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polymulx([4, 5, -2], 2)
+[8, 10, -4]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="polypow/2">
@@ -281,7 +316,7 @@
     </a>
     <span class="signature">polypow(polynomial, power)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L146" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -290,7 +325,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns the the coefficients of the polynomial raised to the given power</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polypow([6, -1, 3], 2)
+[36, 1, 9]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="polysub/2">
@@ -303,7 +341,7 @@
     </a>
     <span class="signature">polysub(a, b)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Polynomial.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -312,29 +350,10 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="quadraticroots/3">
-  
-  
-  <div class="detail-header">
-    <a href="#quadraticroots/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">quadraticroots(a, b, c)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Polynomial.ex#L88" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Returns the difference of two Polynomials</p>
+<pre><code class="iex elixir">iex&gt; Polynomial.polysub([2, 3, 7], [1, 5, 9])
+[1, -2, -2]</code></pre>
+
   </section>
 </div>
 
