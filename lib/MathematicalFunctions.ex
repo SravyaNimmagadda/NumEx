@@ -137,12 +137,30 @@ defmodule MathematicalFunc do
     |> Enum.map(fn x  -> :erlang.float_to_binary(:math.atanh(x), decimals: 2)  end)
   end
 
+  @doc """
+  Takes the values of two sides of a right angled triangle and gives the hypotenuse .
+
+      iex> MathematicalFunc.hypot(3, 4)
+      5.0
+
+
+  """
+
   def hypot(s1, s2) do
-    h = round(:math.sqrt((s1 * s1) + (s2 * s2)))
+    h = (:math.sqrt((s1 * s1) + (s2 * s2)))
   end
 
+  @doc """
+  Convets the angle value in degrees to radians .
+
+      iex> MathematicalFunc.deg2rad(180)
+      3.14159
+
+
+  """
+
   def deg2rad(degree) do
-    rad = degree * (pi / 180)
+    rad = degree * (@pi / 180)
   end
 
 
