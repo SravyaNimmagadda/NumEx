@@ -160,8 +160,19 @@ defmodule MathematicalFunc do
   """
 
   def deg2rad(degree) do
-    rad = degree * (@pi / 180)
+    radian = degree * (@pi / 180)
   end
 
+  @doc """
+  Convets the angle value in degrees to radians .
+
+      iex> MathematicalFunc.rad2deg(3.14159)
+      180
+
+
+  """
+  def rad2deg(radian) do
+    degree = radian * (180 / @pi)
+  end
 
 end
