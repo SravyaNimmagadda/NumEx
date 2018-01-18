@@ -1,4 +1,5 @@
 defmodule MathematicalFunc do
+  @pi 3.14159
   @moduledoc """
   A module to perform mathematical unctions
   """
@@ -6,7 +7,7 @@ defmodule MathematicalFunc do
   Takes a list of elements and computes the sine function element wise .
 
   ##Examples
-  
+
       iex>MathematicalFunc.sin([1,2,34,4,5])
 
   """
@@ -135,4 +136,14 @@ defmodule MathematicalFunc do
     list
     |> Enum.map(fn x  -> :erlang.float_to_binary(:math.atanh(x), decimals: 2)  end)
   end
+
+  def hypot(s1, s2) do
+    h = round(:math.sqrt((s1 * s1) + (s2 * s2)))
+  end
+
+  def deg2rad(degree) do
+    rad = degree * (pi / 180)
+  end
+
+
 end
