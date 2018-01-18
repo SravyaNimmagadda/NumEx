@@ -39,7 +39,7 @@ defmodule Logic do
   Takes an array and performs logical not operation on every induvidual element present in it
 
 
-      iex(42)> Logic.logical_not([true, false])
+      iex> Logic.logical_not([true, false])
       [false, true]
 
   """
@@ -51,7 +51,7 @@ defmodule Logic do
   Takes two arrays and performs logical xor operation for the corresponding elements in each array
 
 
-      iex(46)> Logic.logical_xor([false, false, true, true],[false, true, false, true])
+      iex> Logic.logical_xor([false, false, true, true],[false, true, false, true])
       [false, true, true, false]
   """
 
