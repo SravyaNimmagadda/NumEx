@@ -144,6 +144,10 @@ defmodule MathematicalFunc do
   def exp(l), do: Enum.map(l, fn x -> exponent(@e, x) end)
   def exmp(l), do: Enum.map(l, fn x -> exponent(@e, x) - 1 end)
   def exp2(l), do: Enum.map(l, fn x -> exponent(2, x) end)
-
-
+  def log(l), do: Enum.map(l, fn x -> :math.log(x) end)
+  def log10(l), do: Enum.map(l, fn x -> :math.log10(x) end)
+  def log2(l), do: Enum.map(l, fn x -> :math.log2(x) end)
+  def logaddexp(x1, x2), do: :math.log(exponent(@e, x1) + exponent(@e, x2))
+  def logaddexp2(x1, x2), do: :math.log(exponent(2, x1) + exponent(2, x2))
+  
 end
