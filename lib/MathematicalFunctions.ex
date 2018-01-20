@@ -3,7 +3,7 @@ defmodule MathematicalFunc do
   @pi 3.14159
   @e 2.718281
   @moduledoc """
-  A module to perform mathematical unctions
+  A module to perform mathematical functions
   """
   @doc """
   Takes a list of elements and computes the sine function element wise .
@@ -255,4 +255,25 @@ defmodule MathematicalFunc do
 
   """
   def log1p(list), do: Enum.map(list, fn x -> :math.log(x + 1) end)
+  @doc """
+  Add arguments element-wise.
+
+      iex> MathematicalFunc.add([4, 6, 8190])
+      8200
+
+
+  """
+  def add(list), do: Enum.sum(list)
+  @doc """
+  Return the sinc function.
+
+      iex> MathematicalFunc.sinc([4, 6, -4, 5])
+      [-0.09, -0.03, -0.09, 0.06]
+
+
+  """
+  def sinc(list), do:  Enum.map(list, fn x -> :math.sin(@e * x)/(@e * x) end)
+
+
+
 end

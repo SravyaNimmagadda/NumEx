@@ -8,7 +8,7 @@
     <title>MathematicalFunc – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-0ea6a0641b.js"></script>
+    <script src="dist/sidebar_items-79155b7eb4.js"></script>
     
     
     
@@ -77,7 +77,7 @@
 
       
         <section id="moduledoc">
-          <p>A module to perform mathematical unctions</p>
+          <p>A module to perform mathematical functions</p>
 
         </section>
       
@@ -113,6 +113,15 @@
   </div>
   
     <div class="summary-synopsis"><p>Takes a list of elements and computes the acosh function element wise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add/1">add(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Add arguments element-wise</p>
 </div>
   
 </div>
@@ -316,6 +325,15 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#sinc/1">sinc(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return the sinc function</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#sinh/1">sinh(list)</a>
   </div>
   
@@ -415,6 +433,31 @@
   <section class="docstring">
     <p>Takes a list of elements and computes the acosh function element wise .</p>
 <pre><code class="iex elixir">iex&gt;MathematicalFunc.acosh([1,2,34,4,5])</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="add/1">
+  
+  
+  <div class="detail-header">
+    <a href="#add/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">add(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L266" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Add arguments element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.add([4, 6, 8190])
+8200</code></pre>
 
   </section>
 </div>
@@ -960,6 +1003,31 @@
 <p>##Examples</p>
 <pre><code class="iex elixir">iex&gt;MathematicalFunc.sin([1,2,34,4,5])
 [&quot;0.84&quot;, &quot;0.91&quot;, &quot;0.53&quot;, &quot;-0.76&quot;, &quot;-0.96&quot;]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="sinc/1">
+  
+  
+  <div class="detail-header">
+    <a href="#sinc/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sinc(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L275" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Return the sinc function.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.sinc([4, 6, -4, 5])
+[-0.09, -0.03, -0.09, 0.06]</code></pre>
 
   </section>
 </div>
