@@ -11,6 +11,7 @@ defmodule MathematicalFunc do
   ##Examples
 
       iex>MathematicalFunc.sin([1,2,34,4,5])
+      ["0.84", "0.91", "0.53", "-0.76", "-0.96"]
 
   """
   def sin(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.sin(x), decimals: 2)  end)
