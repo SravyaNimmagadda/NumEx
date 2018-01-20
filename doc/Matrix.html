@@ -7,12 +7,11 @@
     <meta name="generator" content="ExDoc v0.18.1">
     <title>Matrix – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
-    
+
+
     <script src="dist/sidebar_items-0ea6a0641b.js"></script>
-    
-    
-    
-    
+
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -24,7 +23,7 @@
 </button>
 <section class="sidebar">
 
-  
+
   <a href="NumEx.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
@@ -34,7 +33,7 @@
         v0.1.0
       </h2>
     </div>
-    
+
   </a>
 
   <form class="sidebar-search" action="search.html">
@@ -47,13 +46,13 @@
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
+
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
+
+
+
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -67,22 +66,22 @@
       <h1>
         <small class="visible-xs">NumEx v0.1.0</small>
         Matrix
-        
-          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L1" title="View Source" class="view-source" rel="help">
+
+          <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
-        
+
       </h1>
 
-      
+
         <section id="moduledoc">
           <p>A module to perform Matrix Operations</p>
 
         </section>
-      
 
-      
+
+
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -91,9 +90,9 @@
             </a>
             Summary
           </h1>
-          
 
-          
+
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
@@ -102,104 +101,104 @@
   <div class="summary-signature">
     <a href="#columncount/1">columncount(list)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes matrix and returns number of columns in the given matrix</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#eye/3">eye(row, col, k)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes three numerals ‘row’, ‘col’, ‘k’ and returns eye matrix of the given order</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#genrandrow/1">genrandrow(col)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes a numeral ‘col’ and returns a single row of ‘col’ number of random elements</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#identity/2">identity(row, col)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col and returns a the identity matrix of the given order</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#max/1">max(mat)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes a Matrix and finds the maximum element from each row</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#ones/2">ones(row, col)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of ones</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#rand/2">rand(row, col)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of random elements</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#rowcount/1">rowcount(row)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes matrix and returns number of rows in the given matrix</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#size/1">size(row)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes a Matrix, returns size of the matrix</p>
 </div>
-  
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#zeros/2">zeros(row, col)</a>
   </div>
-  
+
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of zeros</p>
 </div>
-  
+
 </div>
 
   </div>
 
 
-          
+
 
         </section>
-      
 
-      
 
-      
+
+
+
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
@@ -209,22 +208,22 @@
             Functions
           </h1>
           <div class="detail" id="columncount/1">
-  
-  
+
+
   <div class="detail-header">
     <a href="#columncount/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">columncount(list)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L77" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L77" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes matrix and returns number of columns in the given matrix.</p>
@@ -234,22 +233,22 @@
   </section>
 </div>
 <div class="detail" id="eye/3">
-  
-  
+
+
   <div class="detail-header">
     <a href="#eye/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">eye(row, col, k)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L110" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L110" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes three numerals ‘row’, ‘col’, ‘k’ and returns eye matrix of the given order.</p>
@@ -261,22 +260,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="genrandrow/1">
-  
-  
+
+
   <div class="detail-header">
     <a href="#genrandrow/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">genrandrow(col)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L33" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes a numeral ‘col’ and returns a single row of ‘col’ number of random elements..</p>
@@ -286,22 +285,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="identity/2">
-  
-  
+
+
   <div class="detail-header">
     <a href="#identity/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">identity(row, col)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L97" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L97" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col and returns a the identity matrix of the given order.</p>
@@ -311,22 +310,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="max/1">
-  
-  
+
+
   <div class="detail-header">
     <a href="#max/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">max(mat)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L11" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L11" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes a Matrix and finds the maximum element from each row.</p>
@@ -336,22 +335,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="ones/2">
-  
-  
+
+
   <div class="detail-header">
     <a href="#ones/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">ones(row, col)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L55" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col’ and returns a matrix of ones.</p>
@@ -361,22 +360,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="rand/2">
-  
-  
+
+
   <div class="detail-header">
     <a href="#rand/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">rand(row, col)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L21" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col’ and returns a matrix of random elements.</p>
@@ -386,22 +385,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="rowcount/1">
-  
-  
+
+
   <div class="detail-header">
     <a href="#rowcount/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">rowcount(row)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L67" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L67" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes matrix and returns number of rows in the given matrix.</p>
@@ -411,22 +410,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="size/1">
-  
-  
+
+
   <div class="detail-header">
     <a href="#size/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">size(row)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L87" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L87" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes a Matrix, returns size of the matrix.</p>
@@ -436,22 +435,22 @@ iex&gt; Matrix.eye(3, 3, -1)
   </section>
 </div>
 <div class="detail" id="zeros/2">
-  
-  
+
+
   <div class="detail-header">
     <a href="#zeros/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">zeros(row, col)</span>
-    
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L44" class="view-source" rel="help" title="View Source">
+
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master//home/mahathi/Desktop/LearnElixir/numex/lib/Matrix.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
+
+
+
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col’ and returns a matrix of zeros.</p>
@@ -462,9 +461,9 @@ iex&gt; Matrix.eye(3, 3, -1)
 </div>
 
         </section>
-      
 
-      
+
+
           <footer class="footer">
         <p>
           <span class="line">
@@ -483,10 +482,9 @@ iex&gt; Matrix.eye(3, 3, -1)
 </section>
 </div>
   <script src="dist/app-778c9ef903.js"></script>
-  
-  
-  
-  
+
+
+
+
   </body>
 </html>
-
