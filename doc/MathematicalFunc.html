@@ -8,7 +8,7 @@
     <title>MathematicalFunc – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-7c9337f387.js"></script>
+    <script src="dist/sidebar_items-0ea6a0641b.js"></script>
     
     
     
@@ -154,8 +154,11 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#ceil/1">ceil(l)</a>
+    <a href="#ceil/1">ceil(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Return the ceiling of the input, element-wise</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -187,26 +190,38 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#exmp/1">exmp(l)</a>
+    <a href="#exmp/1">exmp(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Calculate exp(x) - 1 for all elements in the array</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#exp/1">exp(l)</a>
+    <a href="#exp/1">exp(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Calculate the exponential of all elements in the input array</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#exp2/1">exp2(l)</a>
+    <a href="#exp2/1">exp2(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Calculate :math.pow(2, x) for all x in the input array</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#floor/1">floor(l)</a>
+    <a href="#floor/1">floor(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Return the floor of the input, element-wise</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -220,17 +235,74 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#rad2deg/1">rad2deg(radian)</a>
+    <a href="#log/1">log(list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Convets the angle value in degrees to radians</p>
+    <div class="summary-synopsis"><p>Natural logarithm, element-wise</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#rint/1">rint(l)</a>
+    <a href="#log10/1">log10(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Return the base 10 logarithm of the input array, element-wise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#log1p/1">log1p(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return the natural logarithm of one plus the input array, element-wise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#log2/1">log2(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Base-2 logarithm of x for all x in input array</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#logaddexp/2">logaddexp(x1, x2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Logarithm of the sum of exponentiations of the inputs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#logaddexp2/2">logaddexp2(x1, x2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Logarithm of the sum of exponentiations of the inputs in base-2</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rad2deg/1">rad2deg(radian)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Convets the angle value in radians to degrees</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rint/1">rint(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Round elements of the array to the nearest integer</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -271,8 +343,11 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#truncate/1">truncate(l)</a>
+    <a href="#truncate/1">truncate(list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Return the truncated value of the input, element-wise</p>
+</div>
   
 </div>
 
@@ -447,9 +522,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">ceil(l)</span>
+    <span class="signature">ceil(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L165" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -458,7 +533,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Return the ceiling of the input, element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.ceil([3.89, 4.70, 5.62])
+[4.0, 5.0, 6.0]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="cos/1">
@@ -542,9 +620,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">exmp(l)</span>
+    <span class="signature">exmp(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L193" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -553,7 +631,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Calculate exp(x) - 1 for all elements in the array.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.exmp([2, 3, 5])
+[6.38, 19.08, 147.41]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="exp/1">
@@ -564,9 +645,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">exp(l)</span>
+    <span class="signature">exp(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L144" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L184" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -575,7 +656,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Calculate the exponential of all elements in the input array.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.exp([2,3,5])
+[7.38, 20.08, 148.41]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="exp2/1">
@@ -586,9 +670,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">exp2(l)</span>
+    <span class="signature">exp2(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L202" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -597,7 +681,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Calculate :math.pow(2, x) for all x in the input array.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.exp2([4, 5, 6])
+[16.0, 32.0, 64.0]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="floor/1">
@@ -608,9 +695,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">floor(l)</span>
+    <span class="signature">floor(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L156" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -619,7 +706,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Return the floor of the input, element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.floor([3.89, 4.70, 5.62])
+[3.0, 4.0, 5.0]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="hypot/2">
@@ -647,6 +737,156 @@
 
   </section>
 </div>
+<div class="detail" id="log/1">
+  
+  
+  <div class="detail-header">
+    <a href="#log/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">log(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L211" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Natural logarithm, element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.log([3, 4, 5, 8])
+[0.47, 0.60, 0.69, 0.90]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="log10/1">
+  
+  
+  <div class="detail-header">
+    <a href="#log10/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">log10(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L220" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Return the base 10 logarithm of the input array, element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.log10([10, 100, 1000])
+[1.0, 2.0, 3.0]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="log1p/1">
+  
+  
+  <div class="detail-header">
+    <a href="#log1p/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">log1p(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L256" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Return the natural logarithm of one plus the input array, element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.log1p([4, 5, 7, 8])
+  [1.61, 1.79, 2.07, 2.19]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="log2/1">
+  
+  
+  <div class="detail-header">
+    <a href="#log2/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">log2(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L229" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Base-2 logarithm of x for all x in input array.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.log2([2,4, 8])
+[1.0, 2.0, 3.0]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="logaddexp/2">
+  
+  
+  <div class="detail-header">
+    <a href="#logaddexp/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">logaddexp(x1, x2)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L238" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Logarithm of the sum of exponentiations of the inputs.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.logaddexp(5, 10)
+10.006</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="logaddexp2/2">
+  
+  
+  <div class="detail-header">
+    <a href="#logaddexp2/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">logaddexp2(x1, x2)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L247" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Logarithm of the sum of exponentiations of the inputs in base-2.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.logaddexp2(2, 3)
+2.48</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="rad2deg/1">
   
   
@@ -666,7 +906,7 @@
     
   </div>
   <section class="docstring">
-    <p>Convets the angle value in degrees to radians .</p>
+    <p>Convets the angle value in radians to degrees.</p>
 <pre><code class="iex elixir">iex&gt; MathematicalFunc.rad2deg(3.14159)
 180</code></pre>
 
@@ -680,9 +920,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">rint(l)</span>
+    <span class="signature">rint(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L147" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -691,7 +931,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Round elements of the array to the nearest integer.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.rint([3.89, 4.70, 5.62])
+[4, 5, 6]</code></pre>
+
   </section>
 </div>
 <div class="detail" id="sin/1">
@@ -799,9 +1042,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">truncate(l)</span>
+    <span class="signature">truncate(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/MathematicalFunctions.ex#L174" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -810,7 +1053,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Return the truncated value of the input, element-wise.</p>
+<pre><code class="iex elixir">iex&gt; MathematicalFunc.truncate([3.89, 4.70, 5.62])
+[3, 4, 5]</code></pre>
+
   </section>
 </div>
 
