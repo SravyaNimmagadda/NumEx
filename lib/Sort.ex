@@ -20,9 +20,39 @@ defmodule Sort do
       iex> Sort.lexsort([5, 3, 6, 8, 1], [0, 9, 4, 7, 2])
       [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     """
-    
-def lexsort(list1, list2) do
+
+  def lexsort(list1, list2) do
     Enum.concat(list1, list2)
     |> Enum.sort
   end
+
+  @doc """
+  Return a sorted copy of a List of Lists based on the value of axis
+
+      iex> Sort.sort([[6, 2], [5, 7], [0, 9]], 1)
+      [[2, 6], [5, 7], [0, 9]]
+      iex> Sort.sort([[6, 2], [5, 7], [1, 3]], 0)
+      [[1, 2], [3, 5], [6, 7]]
+
+      """
+
+
+  def sort(list, axis) do
+    cond do
+      axis == 0 -> List.flatten(list)
+                    |> Enum.sort
+                    |> Enum.chunk_every(2)
+      axis == 1 -> Enum.map(list, fn x -> Enum.sort(x) end)
+    end
+  end
+
+  @doc """
+  Return a sorted copy of an Enumerable sorted along one axis only
+
+      iex> Sort.msort([[3, 4], [0, 1], [6, 5]])
+      [[0, 1], [3, 4], [5, 6]]
+"""
+  def msort(list), do: sort(list, 0)
+
+
 end

@@ -109,10 +109,28 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#msort/1">msort(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return a sorted copy of an Enumerable sorted along one axis only</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#quicksort/1">quicksort(list)</a>
   </div>
   
     <div class="summary-synopsis"><p>Takes a list of elements and sorts the elements in quick sort fashion</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/2">sort(list, axis)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return a sorted copy of a List of Lists based on the value of axis</p>
 </div>
   
 </div>
@@ -161,6 +179,31 @@
 
   </section>
 </div>
+<div class="detail" id="msort/1">
+  
+  
+  <div class="detail-header">
+    <a href="#msort/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">msort(list)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Sort.ex#L55" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Return a sorted copy of an Enumerable sorted along one axis only</p>
+<pre><code class="iex elixir">iex&gt; Sort.msort([[3, 4], [0, 1], [6, 5]])
+  [[0, 1], [3, 4], [5, 6]]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="quicksort/1">
   
   
@@ -183,6 +226,33 @@
     <p>Takes a list of elements and sorts the elements in quick sort fashion.</p>
 <pre><code class="iex elixir">iex&gt;  Sort.quicksort([195,99,78,12])
  [12, 78, 99, 195]]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="sort/2">
+  
+  
+  <div class="detail-header">
+    <a href="#sort/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sort(list, axis)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Sort.ex#L40" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Return a sorted copy of a List of Lists based on the value of axis</p>
+<p>iex&gt; Sort.sort([[6, 2], [5, 7], [0, 9]], 1)
+[[2, 6], [5, 7], [0, 9]]
+iex&gt; Sort.sort([[6, 2], [5, 7], [1, 3]], 0)
+[[1, 2], [3, 5], [6, 7]]</p>
 
   </section>
 </div>
