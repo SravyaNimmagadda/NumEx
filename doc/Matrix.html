@@ -103,7 +103,10 @@
     <a href="#columncount/1">columncount(list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes matrix and returns number of columns in the given matrix</p>
+    <div class="summary-synopsis"><p>Takes matrix and returns number of columns in the given matrix.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.colcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
+4</code></pre>
 </div>
   
 </div>
@@ -112,7 +115,12 @@
     <a href="#eye/3">eye(row, col, k)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes three numerals ‘row’, ‘col’, ‘k’ and returns eye matrix of the given order</p>
+    <div class="summary-synopsis"><p>Takes three numerals ‘row’, ‘col’, ‘k’ and returns eye matrix of the given order.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.eye(4,3,0)
+[[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0]]
+iex&gt; Matrix.eye(3, 3, -1)
+[[0, 0, 0], [1, 0, 0], [0, 1, 0]]</code></pre>
 </div>
   
 </div>
@@ -121,7 +129,10 @@
     <a href="#genrandrow/1">genrandrow(col)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes a numeral ‘col’ and returns a single row of ‘col’ number of random elements</p>
+    <div class="summary-synopsis"><p>Takes a numeral ‘col’ and returns a single row of ‘col’ number of random elements..</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.genrandrow(6)
+[34, 101, 23, 110, 17, 10]</code></pre>
 </div>
   
 </div>
@@ -130,7 +141,10 @@
     <a href="#identity/2">identity(row, col)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col and returns a the identity matrix of the given order</p>
+    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col and returns a the identity matrix of the given order.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.identity(6,3)
+[[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</code></pre>
 </div>
   
 </div>
@@ -139,7 +153,10 @@
     <a href="#max/1">max(mat)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes a Matrix and finds the maximum element from each row</p>
+    <div class="summary-synopsis"><p>Takes a Matrix and finds the maximum element from each row.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
+       [34, 5, 7]</code></pre>
 </div>
   
 </div>
@@ -148,7 +165,10 @@
     <a href="#ones/2">ones(row, col)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of ones</p>
+    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of ones.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.ones(5,3)
+[[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]</code></pre>
 </div>
   
 </div>
@@ -157,7 +177,10 @@
     <a href="#rand/2">rand(row, col)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of random elements</p>
+    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of random elements.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.rand(2,3)
+[[47, 31, 53], [6, 7, 42]]</code></pre>
 </div>
   
 </div>
@@ -166,7 +189,10 @@
     <a href="#rowcount/1">rowcount(row)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes matrix and returns number of rows in the given matrix</p>
+    <div class="summary-synopsis"><p>Takes matrix and returns number of rows in the given matrix.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.rowcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
+3</code></pre>
 </div>
   
 </div>
@@ -175,7 +201,24 @@
     <a href="#size/1">size(row)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes a Matrix, returns size of the matrix</p>
+    <div class="summary-synopsis"><p>Takes a Matrix, returns size of the matrix.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.size([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]])
+     6</code></pre>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transp/1">transp(a)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Transposes a matrix.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.transp([[1, 2, 3], [4, 5, 6]])
+[[1, 4],
+ [2, 5],
+ [3, 6]]</code></pre>
 </div>
   
 </div>
@@ -184,7 +227,10 @@
     <a href="#zeros/2">zeros(row, col)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of zeros</p>
+    <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of zeros.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.zeros(6,3)
+[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</code></pre>
 </div>
   
 </div>
@@ -228,6 +274,11 @@
   </div>
   <section class="docstring">
     <p>Takes matrix and returns number of columns in the given matrix.</p>
+<h2 id="columncount/1-examples" class="section-heading">
+  <a href="#columncount/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.colcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
 4</code></pre>
 
@@ -253,6 +304,11 @@
   </div>
   <section class="docstring">
     <p>Takes three numerals ‘row’, ‘col’, ‘k’ and returns eye matrix of the given order.</p>
+<h2 id="eye/3-examples" class="section-heading">
+  <a href="#eye/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.eye(4,3,0)
 [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0]]
 iex&gt; Matrix.eye(3, 3, -1)
@@ -280,6 +336,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes a numeral ‘col’ and returns a single row of ‘col’ number of random elements..</p>
+<h2 id="genrandrow/1-examples" class="section-heading">
+  <a href="#genrandrow/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.genrandrow(6)
 [34, 101, 23, 110, 17, 10]</code></pre>
 
@@ -305,6 +366,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col and returns a the identity matrix of the given order.</p>
+<h2 id="identity/2-examples" class="section-heading">
+  <a href="#identity/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.identity(6,3)
 [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</code></pre>
 
@@ -330,6 +396,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes a Matrix and finds the maximum element from each row.</p>
+<h2 id="max/1-examples" class="section-heading">
+  <a href="#max/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt;Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
        [34, 5, 7]</code></pre>
 
@@ -355,6 +426,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col’ and returns a matrix of ones.</p>
+<h2 id="ones/2-examples" class="section-heading">
+  <a href="#ones/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.ones(5,3)
 [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]</code></pre>
 
@@ -380,6 +456,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col’ and returns a matrix of random elements.</p>
+<h2 id="rand/2-examples" class="section-heading">
+  <a href="#rand/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.rand(2,3)
 [[47, 31, 53], [6, 7, 42]]</code></pre>
 
@@ -405,6 +486,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes matrix and returns number of rows in the given matrix.</p>
+<h2 id="rowcount/1-examples" class="section-heading">
+  <a href="#rowcount/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.rowcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
 3</code></pre>
 
@@ -430,8 +516,51 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes a Matrix, returns size of the matrix.</p>
+<h2 id="size/1-examples" class="section-heading">
+  <a href="#size/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.size([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]])
      6</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="transp/1">
+  
+  
+  <div class="detail-header">
+    <a href="#transp/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">transp(a)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L125" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>transp([[number()]]) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Transposes a matrix.</p>
+<h2 id="transp/1-examples" class="section-heading">
+  <a href="#transp/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.transp([[1, 2, 3], [4, 5, 6]])
+[[1, 4],
+ [2, 5],
+ [3, 6]]</code></pre>
 
   </section>
 </div>
@@ -455,6 +584,11 @@ iex&gt; Matrix.eye(3, 3, -1)
   </div>
   <section class="docstring">
     <p>Takes two numerals ‘row’, ‘col’ and returns a matrix of zeros.</p>
+<h2 id="zeros/2-examples" class="section-heading">
+  <a href="#zeros/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Matrix.zeros(6,3)
 [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</code></pre>
 
