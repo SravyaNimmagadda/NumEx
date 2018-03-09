@@ -1,10 +1,10 @@
 defmodule Matrix do
-  @moduledoc """
+  @moduledoc"""
   A module to perform Matrix Operations
   """
-  @doc """
+  @doc"""
   Takes a Matrix and finds the maximum element from each row.
-
+  ## Examples
       iex>Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
              [34, 5, 7]
   """
@@ -12,9 +12,9 @@ defmodule Matrix do
     Enum.map(mat, fn x -> Enum.max(x) end)
   end
 
-  @doc """
+  @doc"""
   Takes two numerals 'row', 'col' and returns a matrix of random elements.
-
+  ## Examples
       iex> Matrix.rand(2,3)
       [[47, 31, 53], [6, 7, 42]]
   """
@@ -23,9 +23,9 @@ defmodule Matrix do
       |> Enum.map(fn x -> genrandrow(col) end)
   end
 
-  @doc """
+  @doc"""
   Takes a numeral 'col' and returns a single row of 'col' number of random elements..
-
+  ## Examples
       iex> Matrix.genrandrow(6)
       [34, 101, 23, 110, 17, 10]
   """
@@ -35,9 +35,9 @@ defmodule Matrix do
     |> Enum.map(fn x -> x + :rand.uniform(120) end)
    end
 
-   @doc """
+   @doc"""
    Takes two numerals 'row', 'col' and returns a matrix of zeros.
-
+   ## Examples
        iex> Matrix.zeros(6,3)
        [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
    """
@@ -46,9 +46,9 @@ defmodule Matrix do
     |> Enum.map(fn x -> List.duplicate(0, col) end)
   end
 
-  @doc """
+  @doc"""
   Takes two numerals 'row', 'col' and returns a matrix of ones.
-
+  ## Examples
       iex> Matrix.ones(5,3)
       [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]
   """
@@ -57,9 +57,9 @@ defmodule Matrix do
     |> Enum.map(fn x -> List.duplicate(1, col) end)
   end
 
-  @doc """
+  @doc"""
   Takes matrix and returns number of rows in the given matrix.
-
+  ## Examples
       iex> Matrix.rowcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
       3
 
@@ -68,9 +68,9 @@ defmodule Matrix do
     Enum.count(row)
   end
 
-  @doc """
+  @doc"""
   Takes matrix and returns number of columns in the given matrix.
-
+  ## Examples
       iex> Matrix.colcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
       4
   """
@@ -78,9 +78,9 @@ defmodule Matrix do
       Enum.count(first_row)
   end
 
-  @doc """
+  @doc"""
   Takes a Matrix, returns size of the matrix.
-
+  ## Examples
       iex> Matrix.size([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]])
            6
   """
@@ -88,9 +88,9 @@ defmodule Matrix do
     Enum.max([rowcount(row), columncount(row)])
   end
 
-  @doc """
+  @doc"""
   Takes two numerals 'row', 'col and returns a the identity matrix of the given order.
-
+  ## Examples
       iex> Matrix.identity(6,3)
       [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
   """
@@ -98,9 +98,9 @@ defmodule Matrix do
     Enum.map(0..row-1, fn i -> for j <- 0..col-1, do: (if i==j, do: 1, else: 0) end)
   end
 
-  @doc """
+  @doc"""
   Takes three numerals 'row', 'col', 'k' and returns eye matrix of the given order.
-
+  ## Examples
       iex> Matrix.eye(4,3,0)
       [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0]]
       iex> Matrix.eye(3, 3, -1)
@@ -113,4 +113,16 @@ defmodule Matrix do
 
   end
 
+  @doc"""
+  Transposes a matrix.
+  ## Examples
+      iex> Matrix.transp([[1, 2, 3], [4, 5, 6]])
+      [[1, 4],
+       [2, 5],
+       [3, 6]]
+  """
+  @spec transp([[number]]) :: [[number]]
+  def transp(a) do
+    List.zip(a) |> Enum.map(&Tuple.to_list(&1))
+  end
 end
