@@ -8,7 +8,7 @@
     <title>Matrix – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-79155b7eb4.js"></script>
+    <script src="dist/sidebar_items-2aaef59ab2.js"></script>
     
     
     
@@ -100,13 +100,21 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#add/2">add(m1, m2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs elmentwise addition</p>
+<h2>Examples</h2>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#columncount/1">columncount(list)</a>
   </div>
   
     <div class="summary-synopsis"><p>Takes matrix and returns number of columns in the given matrix.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.colcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
-4</code></pre>
 </div>
   
 </div>
@@ -117,10 +125,6 @@
   
     <div class="summary-synopsis"><p>Takes three numerals ‘row’, ‘col’, ‘k’ and returns eye matrix of the given order.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.eye(4,3,0)
-[[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0]]
-iex&gt; Matrix.eye(3, 3, -1)
-[[0, 0, 0], [1, 0, 0], [0, 1, 0]]</code></pre>
 </div>
   
 </div>
@@ -131,8 +135,6 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes a numeral ‘col’ and returns a single row of ‘col’ number of random elements..</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.genrandrow(6)
-[34, 101, 23, 110, 17, 10]</code></pre>
 </div>
   
 </div>
@@ -143,8 +145,6 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col and returns a the identity matrix of the given order.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.identity(6,3)
-[[1, 0, 0], [0, 1, 0], [0, 0, 1], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</code></pre>
 </div>
   
 </div>
@@ -155,8 +155,6 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes a Matrix and finds the maximum element from each row.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt;Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
-       [34, 5, 7]</code></pre>
 </div>
   
 </div>
@@ -167,8 +165,6 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of ones.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.ones(5,3)
-[[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]</code></pre>
 </div>
   
 </div>
@@ -179,8 +175,6 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of random elements.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.rand(2,3)
-[[47, 31, 53], [6, 7, 42]]</code></pre>
 </div>
   
 </div>
@@ -191,8 +185,16 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes matrix and returns number of rows in the given matrix.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.rowcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
-3</code></pre>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#scalar/2">scalar(m1, s)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Elementwise mutiplication with a scalar.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -203,22 +205,29 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes a Matrix, returns size of the matrix.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.size([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]])
-     6</code></pre>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#transp/1">transp(a)</a>
+    <a href="#sub/2">sub(m1, m2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs elementwise subtraction</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Matrix.sub([[1, 2, 3],[1, 2, 2]],[[1, 2, 3],[2, 2, 2]])
+[[0, 0, 0],
+ [-1, 0, 0]]</code></pre>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transpose/1">transpose(a)</a>
   </div>
   
     <div class="summary-synopsis"><p>Transposes a matrix.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.transp([[1, 2, 3], [4, 5, 6]])
-[[1, 4],
- [2, 5],
- [3, 6]]</code></pre>
 </div>
   
 </div>
@@ -229,8 +238,6 @@ iex&gt; Matrix.eye(3, 3, -1)
   
     <div class="summary-synopsis"><p>Takes two numerals ‘row’, ‘col’ and returns a matrix of zeros.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Matrix.zeros(6,3)
-[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</code></pre>
 </div>
   
 </div>
@@ -254,7 +261,44 @@ iex&gt; Matrix.eye(3, 3, -1)
             </a>
             Functions
           </h1>
-          <div class="detail" id="columncount/1">
+          <div class="detail" id="add/2">
+  
+  
+  <div class="detail-header">
+    <a href="#add/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">add(m1, m2)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L155" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>add([[number()]], [[number()]]) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Performs elmentwise addition</p>
+<h2 id="add/2-examples" class="section-heading">
+  <a href="#add/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.add([[1, 2, 3],[1, 1, 1]],[[3, 2, 1],[2, 2, 2]])
+[[4, 4, 4],
+ [3, 3, 3]]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="columncount/1">
   
   
   <div class="detail-header">
@@ -264,12 +308,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">columncount(list)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L89" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>columncount([[number()]]) :: number()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -294,12 +344,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">eye(row, col, k)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L128" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>eye(number(), number(), number()) :: [[number()]]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -326,12 +382,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">genrandrow(col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>genrandrow(number()) :: [number()]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -356,12 +418,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">identity(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L113" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>identity(number(), number()) :: [[number()]]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -386,12 +454,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">max(mat)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>max([[number()]]) :: [number()]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -416,12 +490,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">ones(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L64" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>ones(number(), number()) :: [[number()]]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -446,12 +526,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">rand(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>rand(number(), number()) :: [[number()]]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -476,12 +562,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">rowcount(row)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L77" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>rowcount([[number()]]) :: number()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -496,6 +588,43 @@ iex&gt; Matrix.eye(3, 3, -1)
 
   </section>
 </div>
+<div class="detail" id="scalar/2">
+  
+  
+  <div class="detail-header">
+    <a href="#scalar/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">scalar(m1, s)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L182" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>scalar([[number()]], number()) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Elementwise mutiplication with a scalar.</p>
+<h2 id="scalar/2-examples" class="section-heading">
+  <a href="#scalar/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.scalar([[2, 2, 2], [1, 1, 1]], 2)
+[[4, 4, 4],
+ [2, 2, 2]]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="size/1">
   
   
@@ -506,12 +635,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">size(row)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L101" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>size([number()]) :: number()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -526,17 +661,17 @@ iex&gt; Matrix.eye(3, 3, -1)
 
   </section>
 </div>
-<div class="detail" id="transp/1">
+<div class="detail" id="sub/2">
   
   
   <div class="detail-header">
-    <a href="#transp/1" class="detail-link" title="Link to this function">
+    <a href="#sub/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">transp(a)</span>
+    <span class="signature">sub(m1, m2)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L169" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -545,22 +680,57 @@ iex&gt; Matrix.eye(3, 3, -1)
     
       <div class="specs">
         
-          <pre>transp([[number()]]) :: [[number()]]</pre>
+          <pre>sub([[number()]], [[number()]]) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Performs elementwise subtraction</p>
+<h2 id="sub/2-examples" class="section-heading">
+  <a href="#sub/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.sub([[1, 2, 3],[1, 2, 2]],[[1, 2, 3],[2, 2, 2]])
+[[0, 0, 0],
+ [-1, 0, 0]]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="transpose/1">
+  
+  
+  <div class="detail-header">
+    <a href="#transpose/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">transpose(a)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L142" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>transpose([[number()]]) :: [[number()]]</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Transposes a matrix.</p>
-<h2 id="transp/1-examples" class="section-heading">
-  <a href="#transp/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+<h2 id="transpose/1-examples" class="section-heading">
+  <a href="#transpose/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Matrix.transp([[1, 2, 3], [4, 5, 6]])
-[[1, 4],
- [2, 5],
- [3, 6]]</code></pre>
+<pre><code class="iex elixir">iex&gt; Matrix.transpose([[1, 2, 3], [4, 5, 6]])
+[[1, 4], [2, 5], [3, 6]]</code></pre>
 
   </section>
 </div>
@@ -574,12 +744,18 @@ iex&gt; Matrix.eye(3, 3, -1)
     </a>
     <span class="signature">zeros(row, col)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>zeros(number(), number()) :: [[number()]]</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
