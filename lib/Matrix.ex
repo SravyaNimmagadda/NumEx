@@ -10,7 +10,7 @@ defmodule Matrix do
       iex>Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
              [34, 5, 7]
   """
-  @spec max([[number]]) :: [number]
+  @spec max([[integer]]) :: [integer]
   def max(mat) when is_list(mat)do
     Enum.map(mat, fn x -> Enum.max(x) end)
   end
