@@ -1,6 +1,6 @@
 {application,numex,
              [{description,"numex"},
-              {modules,['Elixir.Binary','Elixir.Count','Elixir.Decimal',
+              {modules,['Elixir.Binary','Elixir.Count','Elixir.Decimal_',
                         'Elixir.FinancialFunctions','Elixir.Fraction',
                         'Elixir.Logic','Elixir.MathematicalFunc',
                         'Elixir.Matrix','Elixir.NumEx','Elixir.Polynomial',

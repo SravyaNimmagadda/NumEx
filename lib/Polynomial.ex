@@ -107,8 +107,8 @@ defmodule Polynomial do
   def polydiv(f, g) when length(f) < length(g), do: {[0], f}
   def polydiv(f, g) do
     {q, r} = polydiv(g, [], f)
-    if q == [], do: q = [0]
-    if r == [], do: r = [0]
+    if q == [], do: [0]
+    if r == [], do: [0]
     {q, r}
   end
   defp polydiv(g, q, r) when length(r) < length(g), do: {q, r}

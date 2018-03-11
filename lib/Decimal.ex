@@ -1,4 +1,4 @@
-defmodule Decimal do
+defmodule Decimal_ do
   @moduledoc"""
   A module to perform operations on decimal values
   """
@@ -9,11 +9,11 @@ defmodule Decimal do
 
   ## Examples
 
-      iex> Decimal.compare(1, 5)
+      iex> Decimal_.compare(1, 5)
       -1
-      iex> Decimal.compare(1, -5)
+      iex> Decimal_.compare(1, -5)
       1
-      iex> Decimal.compare(4, 4)
+      iex> Decimal_.compare(4, 4)
       0
   """
   def compare(n,m) do
@@ -31,13 +31,13 @@ defmodule Decimal do
    ## Examples
 
 
-       iex> Decimal.compare_total(1, 5)
+       iex> Decimal_.compare_total(1, 5)
        -1
-       iex> Decimal.compare_total(1, -5)
+       iex> Decimal_.compare_total(1, -5)
        1
-       iex> Decimal.compare_total(4, 4)
+       iex> Decimal_.compare_total(4, 4)
        0
-       iex> Decimal.compare_total(1, 1.0)
+       iex> Decimal_.compare_total(1, 1.0)
        -1
    """
 
@@ -55,11 +55,11 @@ defmodule Decimal do
 
   ## Examples
 
-      iex> Decimal.is_signed(10)
+      iex> Decimal_.is_signed(10)
       false
-      iex> Decimal.is_signed(-10)
+      iex> Decimal_.is_signed(-10)
       true
-      iex> Decimal.is_signed(0)
+      iex> Decimal_.is_signed(0)
       false
   """
   def is_signed(n), do: n < 0
@@ -69,9 +69,9 @@ defmodule Decimal do
 
   ## Examples
 
-      iex> Decimal.abs(15)
+      iex> Decimal_.abs(15)
       15
-      iex> Decimal.abs(-32)
+      iex> Decimal_.abs(-32)
       32
   """
   def abs(n) do
@@ -86,7 +86,7 @@ defmodule Decimal do
 
   ## Examples
 
-      iex> Decimal.fma(2, 3, -5)
+      iex> Decimal_.fma(2, 3, -5)
   """
   def fma(i, j, k) do
   i * j + k

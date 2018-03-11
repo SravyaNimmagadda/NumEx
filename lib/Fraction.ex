@@ -183,7 +183,7 @@ Returns the decimal value of a given fraction
 
 """
 def frac_to_dec([a, b]) do
-  x = Fraction.new(a, b);
-  dec = a / b
+  Fraction.new(a, b);
+  a / b
 end
 end

@@ -26,7 +26,7 @@ defmodule Matrix do
   @spec rand(number, number) :: [[number]]
   def rand(row, col) do
       List.duplicate(0, row)
-      |> Enum.map(fn x -> genrandrow(col) end)
+      |> Enum.map(fn _ -> genrandrow(col) end)
   end
 
   @doc"""
@@ -54,7 +54,7 @@ defmodule Matrix do
    @spec zeros(number, number) :: [[number]]
    def zeros(row, col) do
     List.duplicate(0, row)
-    |> Enum.map(fn x -> List.duplicate(0, col) end)
+    |> Enum.map(fn _ -> List.duplicate(0, col) end)
   end
 
   @doc"""
@@ -68,7 +68,7 @@ defmodule Matrix do
   @spec ones(number, number) :: [[number]]
   def ones(row, col) do
     List.duplicate(1, row)
-    |> Enum.map(fn x -> List.duplicate(1, col) end)
+    |> Enum.map(fn _ -> List.duplicate(1, col) end)
   end
 
   @doc"""
@@ -80,7 +80,7 @@ defmodule Matrix do
       3
   """
   @spec rowcount([[number]]) :: number
-  def rowcount(row = [h | _]) do
+  def rowcount(row = [_ | _]) do
     Enum.count(row)
   end
 
