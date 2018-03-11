@@ -29,5 +29,5 @@ defmodule StringManipulations do
     s <> "" <> List.to_string(Enum.take(k, -1))
   end
 
-  
+
 end
