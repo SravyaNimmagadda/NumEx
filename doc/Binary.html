@@ -8,7 +8,7 @@
     <title>Binary – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-2aaef59ab2.js"></script>
+    <script src="dist/sidebar_items-79155b7eb4.js"></script>
     
     
     
@@ -103,7 +103,8 @@
     <a href="#binary_repr/1">binary_repr(x)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes an Integer, returns its binary representation</p>
+    <div class="summary-synopsis"><p>Takes an Integer, returns its binary representation.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -112,7 +113,8 @@
     <a href="#bitwise_and/2">bitwise_and(arr1, arr2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_and on them, element_wise</p>
+    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_and on them, element_wise.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -121,7 +123,8 @@
     <a href="#bitwise_or/2">bitwise_or(arr1, arr2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_or on them, element_wise</p>
+    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_or on them, element_wise.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -130,7 +133,8 @@
     <a href="#bitwise_xor/2">bitwise_xor(arr1, arr2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_or on them, element_wise</p>
+    <div class="summary-synopsis"><p>Takes an two enumerables, performs bitwise_or on them, element_wise.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -139,7 +143,8 @@
     <a href="#invert/1">invert(arr1)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes an  enumerable, performs bitwise_not on its elements</p>
+    <div class="summary-synopsis"><p>Takes an  enumerable, performs bitwise_not on its elements.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -148,7 +153,8 @@
     <a href="#left_shift/2">left_shift(x, y)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes two values, performs arithmetic left shift on them</p>
+    <div class="summary-synopsis"><p>Takes two values, performs arithmetic left shift on them.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -157,7 +163,8 @@
     <a href="#right_shift/2">right_shift(x, y)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes two values, performs arithmetic right shift on them</p>
+    <div class="summary-synopsis"><p>Takes two values, performs arithmetic right shift on them.</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -201,6 +208,11 @@
   </div>
   <section class="docstring">
     <p>Takes an Integer, returns its binary representation.</p>
+<h2 id="binary_repr/1-examples" class="section-heading">
+  <a href="#binary_repr/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt;Binary.binary_repr(5)
 101</code></pre>
 
@@ -226,6 +238,11 @@
   </div>
   <section class="docstring">
     <p>Takes an two enumerables, performs bitwise_and on them, element_wise.</p>
+<h2 id="bitwise_and/2-examples" class="section-heading">
+  <a href="#bitwise_and/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Binary.bitwise_and([2,3,4],[4,5,6])
 [0, 1, 4]</code></pre>
 
@@ -251,6 +268,11 @@
   </div>
   <section class="docstring">
     <p>Takes an two enumerables, performs bitwise_or on them, element_wise.</p>
+<h2 id="bitwise_or/2-examples" class="section-heading">
+  <a href="#bitwise_or/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Binary.bitwise_or([2,3,4],[4,5,6])
 [6, 7, 6]</code></pre>
 
@@ -276,6 +298,11 @@
   </div>
   <section class="docstring">
     <p>Takes an two enumerables, performs bitwise_or on them, element_wise.</p>
+<h2 id="bitwise_xor/2-examples" class="section-heading">
+  <a href="#bitwise_xor/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Binary.bitwise_xor([2,3,4],[4,5,6])
 [6, 6, 2]</code></pre>
 
@@ -301,6 +328,11 @@
   </div>
   <section class="docstring">
     <p>Takes an  enumerable, performs bitwise_not on its elements.</p>
+<h2 id="invert/1-examples" class="section-heading">
+  <a href="#invert/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt;  Binary.invert([32, 5, 1])
 [-33, -6, -2]</code></pre>
 
@@ -326,6 +358,11 @@
   </div>
   <section class="docstring">
     <p>Takes two values, performs arithmetic left shift on them.</p>
+<h2 id="left_shift/2-examples" class="section-heading">
+  <a href="#left_shift/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Binary.left_shift(2,[4,5,6])
 [32, 64, 128]</code></pre>
 
@@ -351,6 +388,11 @@
   </div>
   <section class="docstring">
     <p>Takes two values, performs arithmetic right shift on them.</p>
+<h2 id="right_shift/2-examples" class="section-heading">
+  <a href="#right_shift/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Binary.right_shift(32,[4,5,6])
 [2, 1, 0]</code></pre>
 

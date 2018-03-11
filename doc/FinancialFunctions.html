@@ -8,7 +8,7 @@
     <title>FinancialFunctions – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-2aaef59ab2.js"></script>
+    <script src="dist/sidebar_items-79155b7eb4.js"></script>
     
     
     
@@ -76,6 +76,33 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>A module to perform financial functions.
+The following terminology are used throughout the module :</p>
+<pre><code class="elixir">ROE - Return on Equity.
+PAT - Profit After Tax.
+ROT - Return on Investments. (Also, Return on Capital Employed)
+EBIT - Earnings Before Interest &amp; Taxes.
+T - Corporate Tax Rate.
+NPM - Net profit Margin.
+nshares - number of shares.
+EPS - Earning Per Share.
+DPS - Dividend Per Shares.
+d - Dividend.
+FV - Future Value of money.
+n - n periods.
+r - interest rate of &#39;r&#39; per period.
+p - Original Principal Amt or present value.
+m - quaterly or monthly compounding.
+f - future value of money.
+FVA1 - Future Value of Annuity of Re 1, r - interest rate, n - periods.
+FVAN - Future Value Annuity Factor at &#39;r%&#39; for &#39;n&#39; years.
+EIR - Effective Interest rate.
+PVA1 - Present Value of Annuity of Re 1.
+PVAN - Present Value Annuity Factor at &#39;r%&#39; for &#39;n&#39; years.</code></pre>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -98,6 +125,9 @@
     <a href="#dps/2">dps(d, nShares)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes d, nShares &amp; returns DPS</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -109,6 +139,9 @@
   <div class="summary-signature">
     <a href="#eps/2">eps(pat, nShares)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes PAT, nShares &amp; returns EPS</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -140,6 +173,9 @@
     <a href="#npm/2">npm(pat, sales)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Takes PAT, Sales &amp; returns NPM</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -170,11 +206,17 @@
     <a href="#roe/2">roe(pat, netWorth)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns ROE</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#roi/3">roi(ebit, t, netAssets)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes EBIT, T, NetAssets and returns ROI</p>
+</div>
   
 </div>
 
@@ -207,7 +249,7 @@
     </a>
     <span class="signature">dps(d, nShares)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -216,7 +258,8 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes d, nShares &amp; returns DPS.</p>
+
   </section>
 </div>
 <div class="detail" id="eir/2">
@@ -229,7 +272,7 @@
     </a>
     <span class="signature">eir(r, m)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L69" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -251,7 +294,7 @@
     </a>
     <span class="signature">eps(pat, nShares)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L42" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -260,7 +303,8 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes PAT, nShares &amp; returns EPS.</p>
+
   </section>
 </div>
 <div class="detail" id="fv/3">
@@ -273,7 +317,7 @@
     </a>
     <span class="signature">fv(p, r, n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L47" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -295,7 +339,7 @@
     </a>
     <span class="signature">fv(p, r, n, m)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L48" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -317,7 +361,7 @@
     </a>
     <span class="signature">fva1(r, n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -339,7 +383,7 @@
     </a>
     <span class="signature">fvan(r, n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L61" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -361,7 +405,7 @@
     </a>
     <span class="signature">npm(pat, sales)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -370,7 +414,8 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes PAT, Sales &amp; returns NPM.</p>
+
   </section>
 </div>
 <div class="detail" id="pv/3">
@@ -383,7 +428,7 @@
     </a>
     <span class="signature">pv(f, r, n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -405,7 +450,7 @@
     </a>
     <span class="signature">pv(f, r, n, m)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L52" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -427,7 +472,7 @@
     </a>
     <span class="signature">pva1(r, n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L58" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -449,7 +494,7 @@
     </a>
     <span class="signature">pvan(r, n)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L63" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -471,7 +516,7 @@
     </a>
     <span class="signature">roe(pat, netWorth)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L30" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -480,7 +525,8 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Returns ROE.</p>
+
   </section>
 </div>
 <div class="detail" id="roi/3">
@@ -493,7 +539,7 @@
     </a>
     <span class="signature">roi(ebit, t, netAssets)</span>
     
-      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Financial.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -502,7 +548,8 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Takes EBIT, T, NetAssets and returns ROI.</p>
+
   </section>
 </div>
 

@@ -1,6 +1,6 @@
 defmodule Polynomial do
 
-  @moduledoc """
+  @moduledoc"""
   A module to perform various operations on Polynomials.
   """
 
@@ -20,9 +20,9 @@ defmodule Polynomial do
      end
   end
 
-  @doc """
+  @doc"""
   Returns the sum of two Polynomials
-
+  ## Examples
 
       iex> Polynomial.polyadd([2, 3, 7], [1, 5])
       [2, 4, 12]iex> Fraction.new(15)
@@ -40,9 +40,9 @@ defmodule Polynomial do
         |> Enum.reverse
   end
 
-  @doc """
+  @doc"""
   Returns the difference of two Polynomials
-
+  ## Examples
 
       iex> Polynomial.polysub([2, 3, 7], [1, 5, 9])
       [1, -2, -2]
@@ -59,9 +59,9 @@ defmodule Polynomial do
         |> Enum.reverse
   end
 
-  @doc """
+  @doc"""
   Returns the product of two Polynomials
-
+  ## Examples
 
       iex> Polynomial.polymul([5, 1, 3], [-1, 2])
       [-5, 9, -1, 6]
@@ -80,9 +80,9 @@ defmodule Polynomial do
      |> Enum.map(fn(x) -> Enum.sum(x) end)
   end
 
-  @doc """
+  @doc"""
   Returns the Polynomial multiplied with a given coefficient
-
+  ## Examples
 
       iex> Polynomial.polymulx([4, 5, -2], 2)
       [8, 10, -4]
@@ -90,15 +90,14 @@ defmodule Polynomial do
 
   def polymulx(poly, x), do: Enum.map(poly, fn(m) -> m * x end)
 
+  @doc"""
+  Returns the quotient and remainder of two Polynomials
+  ## Examples
 
-    @doc """
-    Returns the quotient and remainder of two Polynomials
+      iex> Polynomial.polydiv([4, 5, 2], [2, 1])
+      {[2, 1], [1]}
 
-
-        iex> Polynomial.polydiv([4, 5, 2], [2, 1])
-        {[2, 1], [1]}
-
-    """
+  """
   def polydiv(_, []), do: raise ArgumentError, "denominator is zero"
   def polydiv(_, [0]), do: raise ArgumentError, "denominator is zero"
   def polydiv(f, g) when length(f) < length(g), do: {[0], f}
@@ -119,14 +118,13 @@ defmodule Polynomial do
     polydiv(g, q++[p], tl(temprem))
   end
 
+  @doc"""
+  Returns the derivative of the given Polynomial
+  ## Examples
 
-    @doc """
-    Returns the derivative of the given Polynomial
-
-
-        iex> Polynomial.polyder([6, -1, 3, 2])
-        [18, -2, 3]
-    """
+      iex> Polynomial.polyder([6, -1, 3, 2])
+      [18, -2, 3]
+  """
 
   def polyder(a) do
     degree = Enum.count(a) - 1
@@ -135,9 +133,9 @@ defmodule Polynomial do
     |> Enum.take(degree)
   end
 
-  @doc """
+  @doc"""
   Returns the the coefficients of the polynomial raised to the given power
-
+  ## Examples
 
       iex> Polynomial.polypow([6, -1, 3], 2)
       [36, 1, 9]

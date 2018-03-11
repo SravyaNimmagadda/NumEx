@@ -1,10 +1,11 @@
 defmodule Count do
-  @moduledoc """
+  @moduledoc"""
   A module to count various parameters in a given Enumerable.
   """
-  @doc """
+  @doc"""
   Takes an enumerable and counts all non-zero elements from it.
-
+  ## Examples
+  
       iex> Count.count_nonzero([1,0,9,0,3,0,5])
       4
   """
@@ -12,5 +13,5 @@ defmodule Count do
     Enum.count(l, fn(x)  -> x != 0 end)
   end
 
-  
+
 end

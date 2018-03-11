@@ -8,7 +8,7 @@
     <title>Decimal – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-2aaef59ab2.js"></script>
+    <script src="dist/sidebar_items-79155b7eb4.js"></script>
     
     
     
@@ -104,6 +104,7 @@
   </div>
   
     <div class="summary-synopsis"><p>Takes a Decimal value and returns its absolute value</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -114,6 +115,7 @@
   
     <div class="summary-synopsis"><p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
 “1” if it is greater and “0” if the elements are equal</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -124,6 +126,7 @@
   
     <div class="summary-synopsis"><p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
 “1” if it is greater and “0” if the elements are equal. However it helps comparing values like 1 and 1.0</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -134,6 +137,7 @@
   
     <div class="summary-synopsis"><p>Takes three decimal values and performs fast multiplication and addition i.e,
 for the arguments i, j, k the function returns the value i * j + k</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -143,6 +147,7 @@ for the arguments i, j, k the function returns the value i * j + k</p>
   </div>
   
     <div class="summary-synopsis"><p>Takes a Decimal value and returns if the value is signed</p>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -186,6 +191,11 @@ for the arguments i, j, k the function returns the value i * j + k</p>
   </div>
   <section class="docstring">
     <p>Takes a Decimal value and returns its absolute value</p>
+<h2 id="abs/1-examples" class="section-heading">
+  <a href="#abs/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Decimal.abs(15)
 15
 iex&gt; Decimal.abs(-32)
@@ -214,6 +224,11 @@ iex&gt; Decimal.abs(-32)
   <section class="docstring">
     <p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
 “1” if it is greater and “0” if the elements are equal</p>
+<h2 id="compare/2-examples" class="section-heading">
+  <a href="#compare/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Decimal.compare(1, 5)
 -1
 iex&gt; Decimal.compare(1, -5)
@@ -244,6 +259,11 @@ iex&gt; Decimal.compare(4, 4)
   <section class="docstring">
     <p>Takes two Decimal values and compares them; returns “-1” if the first element is less than the second,
 “1” if it is greater and “0” if the elements are equal. However it helps comparing values like 1 and 1.0</p>
+<h2 id="compare_total/2-examples" class="section-heading">
+  <a href="#compare_total/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Decimal.compare_total(1, 5)
 -1
 iex&gt; Decimal.compare_total(1, -5)
@@ -276,6 +296,11 @@ iex&gt; Decimal.compare_total(1, 1.0)
   <section class="docstring">
     <p>Takes three decimal values and performs fast multiplication and addition i.e,
 for the arguments i, j, k the function returns the value i * j + k</p>
+<h2 id="fma/3-examples" class="section-heading">
+  <a href="#fma/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Decimal.fma(2, 3, -5)</code></pre>
 
   </section>
@@ -300,6 +325,11 @@ for the arguments i, j, k the function returns the value i * j + k</p>
   </div>
   <section class="docstring">
     <p>Takes a Decimal value and returns if the value is signed</p>
+<h2 id="is_signed/1-examples" class="section-heading">
+  <a href="#is_signed/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Decimal.is_signed(10)
 false
 iex&gt; Decimal.is_signed(-10)

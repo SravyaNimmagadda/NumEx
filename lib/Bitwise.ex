@@ -1,11 +1,11 @@
 defmodule Binary do
   use Bitwise
-  @moduledoc """
+  @moduledoc"""
   A module to perform binary operations on enumerables
   """
-  @doc """
+  @doc"""
   Takes an two enumerables, performs bitwise_and on them, element_wise.
-
+  ## Examples
 
       iex> Binary.bitwise_and([2,3,4],[4,5,6])
       [0, 1, 4]
@@ -14,9 +14,9 @@ defmodule Binary do
       Enum.zip(arr1, arr2)
       |> Enum.map(fn{x, y} -> band(x,y) end)
   end
-  @doc """
+  @doc"""
   Takes an two enumerables, performs bitwise_or on them, element_wise.
-
+  ## Examples
 
       iex> Binary.bitwise_or([2,3,4],[4,5,6])
       [6, 7, 6]
@@ -25,9 +25,9 @@ defmodule Binary do
     Enum.zip(arr1, arr2)
     |> Enum.map(fn{x, y} -> bor(x, y) end)
   end
-  @doc """
+  @doc"""
   Takes an two enumerables, performs bitwise_or on them, element_wise.
-
+  ## Examples
 
       iex> Binary.bitwise_xor([2,3,4],[4,5,6])
       [6, 6, 2]
@@ -36,9 +36,9 @@ defmodule Binary do
     Enum.zip(arr1, arr2)
     |> Enum.map(fn{x, y} -> bxor(x,y) end)
   end
-  @doc """
+  @doc"""
   Takes an  enumerable, performs bitwise_not on its elements.
-
+  ## Examples
 
       iex>  Binary.invert([32, 5, 1])
       [-33, -6, -2]
@@ -46,9 +46,9 @@ defmodule Binary do
   def invert(arr1) do
     Enum.map(arr1, fn x -> bnot(x) end)
   end
-  @doc """
+  @doc"""
   Takes two values, performs arithmetic left shift on them.
-
+  ## Examples
 
       iex> Binary.left_shift(2,[4,5,6])
       [32, 64, 128]
@@ -57,9 +57,9 @@ defmodule Binary do
     Enum.map(y, fn(c) -> bsl(x, c) end)
   end
   def left_shift(x,y), do: bsl(x,y)
-  @doc """
+  @doc"""
   Takes two values, performs arithmetic right shift on them.
-
+  ## Examples
 
       iex> Binary.right_shift(32,[4,5,6])
       [2, 1, 0]
@@ -68,9 +68,9 @@ defmodule Binary do
     Enum.map(y, fn(c) -> bsr(x, c) end)
   end
   def right_shift(x,y), do: bsr(x,y)
-  @doc """
+  @doc"""
   Takes an Integer, returns its binary representation.
-
+  ## Examples
 
       iex>Binary.binary_repr(5)
       101
