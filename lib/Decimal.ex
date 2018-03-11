@@ -6,6 +6,7 @@ defmodule Decimal do
   @doc"""
   Takes two Decimal values and compares them; returns "-1" if the first element is less than the second,
   "1" if it is greater and "0" if the elements are equal
+
   ## Examples
 
       iex> Decimal.compare(1, 5)
@@ -26,7 +27,9 @@ defmodule Decimal do
    @doc"""
    Takes two Decimal values and compares them; returns "-1" if the first element is less than the second,
    "1" if it is greater and "0" if the elements are equal. However it helps comparing values like 1 and 1.0
+
    ## Examples
+
 
        iex> Decimal.compare_total(1, 5)
        -1
@@ -49,6 +52,7 @@ defmodule Decimal do
 
   @doc"""
   Takes a Decimal value and returns if the value is signed
+
   ## Examples
 
       iex> Decimal.is_signed(10)
@@ -62,6 +66,7 @@ defmodule Decimal do
 
   @doc"""
   Takes a Decimal value and returns its absolute value
+
   ## Examples
 
       iex> Decimal.abs(15)
@@ -78,6 +83,7 @@ defmodule Decimal do
   @doc"""
   Takes three decimal values and performs fast multiplication and addition i.e,
   for the arguments i, j, k the function returns the value i * j + k
+
   ## Examples
 
       iex> Decimal.fma(2, 3, -5)

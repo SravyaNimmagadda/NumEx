@@ -1,10 +1,8 @@
 defmodule NumEx do
-  @moduledoc """
+  @moduledoc"""
   Documentation for NumEx.
 
-  This is an effort to try and replicate the Python's NumPy Packages.
-
+  This is an effort to try and replicate the Python's NumPy Package.
 
   """
-
 end

@@ -7,6 +7,7 @@ defmodule MathematicalFunc do
   """
   @doc"""
   Takes a list of elements and computes the sine function element wise .
+
   ##Examples
 
       iex>MathematicalFunc.sin([1,2,34,4,5])
@@ -17,6 +18,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the Hyperbolic sine function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.sinh([1,2,34,4,5])
@@ -25,6 +27,7 @@ defmodule MathematicalFunc do
   def sinh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.sinh(x), decimals: 2)  end)
   @doc"""
   Takes a list of elements and computes the asin function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.asin([1,2,34,4,5])
@@ -34,6 +37,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the asin function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.asin([1,2,34,4,5])
@@ -42,6 +46,7 @@ defmodule MathematicalFunc do
   def asinh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.asinh(x), decimals: 2)  end)
   @doc"""
   Takes a list of elements and computes the cos function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.cos([1,2,34,4,5])
@@ -51,6 +56,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the cosh function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.cosh([1,2,34,4,5])
@@ -60,6 +66,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the acos function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.acos([1,2,34,4,5])
@@ -70,6 +77,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the acosh function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.acosh([1,2,34,4,5])
@@ -80,6 +88,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the tan function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.tan([1,2,34,4,5])
@@ -89,6 +98,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the tanh function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.tanh([1,2,34,4,5])
@@ -98,6 +108,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the atan function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.atan([1,2,34,4,5])
@@ -107,6 +118,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes a list of elements and computes the atanh function element wise .
+
   ## Examples
 
       iex>MathematicalFunc.atanh([1,2,34,4,5])
@@ -116,6 +128,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Takes the values of two sides of a right angled triangle and gives the hypotenuse .
+
   ## Examples
 
       iex> MathematicalFunc.hypot(3, 4)
@@ -127,6 +140,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Convets the angle value in degrees to radians .
+
   ## Examples
 
       iex> MathematicalFunc.deg2rad(180)
@@ -138,6 +152,7 @@ defmodule MathematicalFunc do
 
   @doc"""
   Convets the angle value in radians to degrees.
+
   ## Examples
 
       iex> MathematicalFunc.rad2deg(3.14159)
@@ -147,6 +162,7 @@ defmodule MathematicalFunc do
   def rad2deg(radian), do: radian * (180 / @pi)
   @doc"""
   Round elements of the array to the nearest integer.
+
   ## Examples
 
       iex> MathematicalFunc.rint([3.89, 4.70, 5.62])
@@ -156,6 +172,7 @@ defmodule MathematicalFunc do
   def rint(list), do: Enum.map(list, fn x -> round(x) end)
   @doc"""
   Return the floor of the input, element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.floor([3.89, 4.70, 5.62])
@@ -165,6 +182,7 @@ defmodule MathematicalFunc do
   def floor(list), do: Enum.map(list, fn x -> Float.floor(x) end)
   @doc"""
   Return the ceiling of the input, element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.ceil([3.89, 4.70, 5.62])
@@ -174,6 +192,7 @@ defmodule MathematicalFunc do
   def ceil(list), do: Enum.map(list, fn x -> Float.ceil(x) end)
   @doc"""
   Return the truncated value of the input, element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.truncate([3.89, 4.70, 5.62])
@@ -184,6 +203,7 @@ defmodule MathematicalFunc do
   defp exponent(base, ex), do: :math.pow(base, ex)
   @doc"""
   Calculate the exponential of all elements in the input array.
+
   ## Examples
 
       iex> MathematicalFunc.exp([2,3,5])
@@ -193,6 +213,7 @@ defmodule MathematicalFunc do
   def exp(list), do: Enum.map(list, fn x -> exponent(@e, x) end)
   @doc"""
   Calculate exp(x) - 1 for all elements in the array.
+
   ## Examples
 
       iex> MathematicalFunc.exmp([2, 3, 5])
@@ -202,6 +223,7 @@ defmodule MathematicalFunc do
   def exmp(list), do: Enum.map(list, fn x -> exponent(@e, x) - 1 end)
   @doc"""
   Calculate :math.pow(2, x) for all x in the input array.
+
   ## Examples
 
       iex> MathematicalFunc.exp2([4, 5, 6])
@@ -212,6 +234,7 @@ defmodule MathematicalFunc do
   def exp2(list), do: Enum.map(list, fn x -> exponent(2, x) end)
   @doc"""
   Natural logarithm, element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.log([3, 4, 5, 8])
@@ -221,6 +244,7 @@ defmodule MathematicalFunc do
   def log(list), do: Enum.map(list, fn x -> :math.log(x) end)
   @doc"""
   Return the base 10 logarithm of the input array, element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.log10([10, 100, 1000])
@@ -230,6 +254,7 @@ defmodule MathematicalFunc do
   def log10(list), do: Enum.map(list, fn x -> :math.log10(x) end)
   @doc"""
   Base-2 logarithm of x for all x in input array.
+
   ## Examples
 
       iex> MathematicalFunc.log2([2,4, 8])
@@ -239,6 +264,7 @@ defmodule MathematicalFunc do
   def log2(list), do: Enum.map(list, fn x -> :math.log2(x) end)
   @doc"""
   Logarithm of the sum of exponentiations of the inputs.
+
   ## Examples
 
       iex> MathematicalFunc.logaddexp(5, 10)
@@ -248,6 +274,7 @@ defmodule MathematicalFunc do
   def logaddexp(x1, x2), do: :math.log(exponent(@e, x1) + exponent(@e, x2))
   @doc"""
   Logarithm of the sum of exponentiations of the inputs in base-2.
+
   ## Examples
 
       iex> MathematicalFunc.logaddexp2(2, 3)
@@ -257,6 +284,7 @@ defmodule MathematicalFunc do
   def logaddexp2(x1, x2), do: :math.log(exponent(2, x1) + exponent(2, x2))
   @doc"""
   Return the natural logarithm of one plus the input array, element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.log1p([4, 5, 7, 8])
@@ -266,6 +294,7 @@ defmodule MathematicalFunc do
   def log1p(list), do: Enum.map(list, fn x -> :math.log(x + 1) end)
   @doc"""
   Add arguments element-wise.
+
   ## Examples
 
       iex> MathematicalFunc.add([4, 6, 8190])
@@ -275,6 +304,7 @@ defmodule MathematicalFunc do
   def add(list), do: Enum.sum(list)
   @doc"""
   Return the sinc function.
+
   ## Examples
 
       iex> MathematicalFunc.sinc([4, 6, -4, 5])

@@ -22,13 +22,13 @@ defmodule Polynomial do
 
   @doc"""
   Returns the sum of two Polynomials
+
   ## Examples
 
       iex> Polynomial.polyadd([2, 3, 7], [1, 5])
-      [2, 4, 12]iex> Fraction.new(15)
+      [2, 4, 12]
 
   """
-
   def polyadd(a, b) do
      list2 = main(a, b)
      list1 = List.zip([Enum.reverse(a), Enum.reverse(b)])
@@ -42,6 +42,7 @@ defmodule Polynomial do
 
   @doc"""
   Returns the difference of two Polynomials
+
   ## Examples
 
       iex> Polynomial.polysub([2, 3, 7], [1, 5, 9])
@@ -61,6 +62,7 @@ defmodule Polynomial do
 
   @doc"""
   Returns the product of two Polynomials
+
   ## Examples
 
       iex> Polynomial.polymul([5, 1, 3], [-1, 2])
@@ -82,6 +84,7 @@ defmodule Polynomial do
 
   @doc"""
   Returns the Polynomial multiplied with a given coefficient
+
   ## Examples
 
       iex> Polynomial.polymulx([4, 5, -2], 2)
@@ -92,6 +95,7 @@ defmodule Polynomial do
 
   @doc"""
   Returns the quotient and remainder of two Polynomials
+
   ## Examples
 
       iex> Polynomial.polydiv([4, 5, 2], [2, 1])
@@ -120,6 +124,7 @@ defmodule Polynomial do
 
   @doc"""
   Returns the derivative of the given Polynomial
+
   ## Examples
 
       iex> Polynomial.polyder([6, -1, 3, 2])
@@ -135,6 +140,7 @@ defmodule Polynomial do
 
   @doc"""
   Returns the the coefficients of the polynomial raised to the given power
+
   ## Examples
 
       iex> Polynomial.polypow([6, -1, 3], 2)

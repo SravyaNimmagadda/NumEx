@@ -4,6 +4,7 @@ defmodule Sort do
   """
   @doc"""
   Takes a list of elements and sorts the elements in quick sort fashion.
+
   ## Examples
 
       iex>  Sort.quicksort([195,99,78,12])
@@ -17,6 +18,7 @@ defmodule Sort do
 
   @doc"""
   Takes a two enumerables and performs Lexographic sort operations.
+
   ## Examples
 
       iex> Sort.lexsort([5, 3, 6, 8, 1], [0, 9, 4, 7, 2])
@@ -30,6 +32,7 @@ defmodule Sort do
 
   @doc"""
   Return a sorted copy of a List of Lists based on the value of axis
+
   ## Examples
 
       iex> Sort.sort([[6, 2], [5, 7], [0, 9]], 1)
@@ -50,6 +53,7 @@ defmodule Sort do
 
   @doc"""
   Return a sorted copy of an Enumerable sorted along one axis only
+
   ## Examples
 
       iex> Sort.msort([[3, 4], [0, 1], [6, 5]])

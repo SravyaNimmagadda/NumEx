@@ -5,6 +5,7 @@ defmodule Binary do
   """
   @doc"""
   Takes an two enumerables, performs bitwise_and on them, element_wise.
+
   ## Examples
 
       iex> Binary.bitwise_and([2,3,4],[4,5,6])
@@ -16,6 +17,7 @@ defmodule Binary do
   end
   @doc"""
   Takes an two enumerables, performs bitwise_or on them, element_wise.
+
   ## Examples
 
       iex> Binary.bitwise_or([2,3,4],[4,5,6])
@@ -27,6 +29,7 @@ defmodule Binary do
   end
   @doc"""
   Takes an two enumerables, performs bitwise_or on them, element_wise.
+
   ## Examples
 
       iex> Binary.bitwise_xor([2,3,4],[4,5,6])
@@ -38,6 +41,7 @@ defmodule Binary do
   end
   @doc"""
   Takes an  enumerable, performs bitwise_not on its elements.
+
   ## Examples
 
       iex>  Binary.invert([32, 5, 1])
@@ -48,6 +52,7 @@ defmodule Binary do
   end
   @doc"""
   Takes two values, performs arithmetic left shift on them.
+
   ## Examples
 
       iex> Binary.left_shift(2,[4,5,6])
@@ -59,6 +64,7 @@ defmodule Binary do
   def left_shift(x,y), do: bsl(x,y)
   @doc"""
   Takes two values, performs arithmetic right shift on them.
+
   ## Examples
 
       iex> Binary.right_shift(32,[4,5,6])
@@ -70,6 +76,7 @@ defmodule Binary do
   def right_shift(x,y), do: bsr(x,y)
   @doc"""
   Takes an Integer, returns its binary representation.
+
   ## Examples
 
       iex>Binary.binary_repr(5)

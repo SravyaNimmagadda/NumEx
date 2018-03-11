@@ -4,6 +4,7 @@ defmodule Matrix do
   """
   @doc"""
   Takes a Matrix and finds the maximum element from each row.
+
   ## Examples
 
       iex>Matrix.max([[1,2,34],[3,4,5],[4,5,6,7]])
@@ -16,6 +17,7 @@ defmodule Matrix do
 
   @doc"""
   Takes two numerals 'row', 'col' and returns a matrix of random elements.
+
   ## Examples
 
       iex> Matrix.rand(2,3)
@@ -29,6 +31,7 @@ defmodule Matrix do
 
   @doc"""
   Takes a numeral 'col' and returns a single row of 'col' number of random elements..
+
   ## Examples
 
       iex> Matrix.genrandrow(6)
@@ -42,6 +45,7 @@ defmodule Matrix do
 
    @doc"""
    Takes two numerals 'row', 'col' and returns a matrix of zeros.
+
    ## Examples
 
        iex> Matrix.zeros(6,3)
@@ -55,6 +59,7 @@ defmodule Matrix do
 
   @doc"""
   Takes two numerals 'row', 'col' and returns a matrix of ones.
+
   ## Examples
 
       iex> Matrix.ones(5,3)
@@ -68,6 +73,7 @@ defmodule Matrix do
 
   @doc"""
   Takes matrix and returns number of rows in the given matrix.
+
   ## Examples
 
       iex> Matrix.rowcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
@@ -80,6 +86,7 @@ defmodule Matrix do
 
   @doc"""
   Takes matrix and returns number of columns in the given matrix.
+
   ## Examples
 
       iex> Matrix.colcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
@@ -92,6 +99,7 @@ defmodule Matrix do
 
   @doc"""
   Takes a Matrix, returns size of the matrix.
+
   ## Examples
 
       iex> Matrix.size([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]])
@@ -104,6 +112,7 @@ defmodule Matrix do
 
   @doc"""
   Takes two numerals 'row', 'col and returns a the identity matrix of the given order.
+
   ## Examples
 
       iex> Matrix.identity(6,3)
@@ -116,6 +125,7 @@ defmodule Matrix do
 
   @doc"""
   Takes three numerals 'row', 'col', 'k' and returns eye matrix of the given order.
+
   ## Examples
 
       iex> Matrix.eye(4,3,0)
@@ -133,6 +143,7 @@ defmodule Matrix do
 
   @doc"""
   Transposes a matrix.
+
   ## Examples
 
       iex> Matrix.transpose([[1, 2, 3], [4, 5, 6]])
@@ -145,6 +156,7 @@ defmodule Matrix do
 
   @doc"""
   Performs elmentwise addition
+
   ## Examples
 
       iex> Matrix.add([[1, 2, 3],[1, 1, 1]],[[3, 2, 1],[2, 2, 2]])
@@ -158,10 +170,11 @@ defmodule Matrix do
 
   @doc"""
   Performs elementwise subtraction
+
   ## Examples
       iex> Matrix.sub([[1, 2, 3],[1, 2, 2]],[[1, 2, 3],[2, 2, 2]])
       [[0, 0, 0],
-       [-1, 0, 0]]
+      [-1, 0, 0]]
   """
   @spec sub([[number]], [[number]]) :: [[number]]
   #def sub(a, b) when length(a) !== length(b),
@@ -172,6 +185,7 @@ defmodule Matrix do
 
   @doc"""
   Elementwise mutiplication with a scalar.
+
   ## Examples
 
       iex> Matrix.scalar([[2, 2, 2], [1, 1, 1]], 2)
@@ -182,8 +196,6 @@ defmodule Matrix do
   def scalar(m1, s) do
     Enum.map(m1, fn(row) -> Enum.map(row, fn(x) -> x * s end) end)
   end
-
-
 
   defp addLists(m1, m2) do
     for {a, b} <- Enum.zip(m1, m2), do: a + b

@@ -35,8 +35,6 @@ defmodule NumEx.Mixfile do
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:complex_num, "~> 1.0.0"},
       {:decimal, "~> 1.0"},
-
-
     ]
   end
 end

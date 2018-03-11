@@ -1,9 +1,10 @@
 defmodule StringManipulations do
   @moduledoc"""
-  A module to perform functions on Strings.
+  A module to perform operations on Strings.
   """
   @doc"""
   Takes two strings and concatenates them element-wise.
+
   ## Examples
 
       iex> StringManipulations.add("Elixir", "Lang")
@@ -18,6 +19,7 @@ defmodule StringManipulations do
 
   @doc"""
   Return (a * i), that is string multiple concatenation, element-wise.
+
   ## Examples
 
       iex> StringManipulations.multiply("Elixir", 3)
@@ -36,6 +38,7 @@ defmodule StringManipulations do
 
   @doc"""
   Return a copy of s1 with its elements centered in a string of length width..
+
   ## Examples
 
       iex> StringManipulations.center("Elixir", 5)
@@ -49,6 +52,7 @@ defmodule StringManipulations do
 
   @doc"""
   Return a string which is the concatenation of the strings in the sequence seq.
+
   ## Examples
 
       iex> StringManipulations.join("Elixir", "Lang")

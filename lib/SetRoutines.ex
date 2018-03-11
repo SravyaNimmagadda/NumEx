@@ -4,6 +4,7 @@ defmodule SetRoutines do
   """
   @doc"""
   Takes two enumerables, returns a MapSet by performing set exclusive-or on them, element-wise.
+
   ## Examples
 
       iex> SetRoutines.setxor1d([1,2,3,2,4],[2,3,5,7,5])

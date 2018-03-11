@@ -10,6 +10,7 @@ defstruct [:numerator, :denominator]
 
 @doc"""
 Gives a fration structure to a value.
+
 ## Examples
 
     iex> Fraction.new(15)
@@ -21,6 +22,7 @@ Gives a fration structure to a value.
 def new(x), do: %Fraction{numerator: x, denominator: 1}
 @doc"""
 Gives a fration structure to a value.
+
 ## Examples
 
     iex> Fraction.new(15, 7)
@@ -33,6 +35,7 @@ def new(x, y), do: %Fraction{numerator: x, denominator: y}
 
 @doc"""
 Converts a mixed fraction to an improper fraction
+
 ## Examples
 
     iex> Fraction.to_improper(5, 1, 2)
@@ -44,6 +47,7 @@ def to_improper(x,y,z), do: %Fraction{numerator: x * z + y, denominator: z}
 
 @doc"""
 Converts an improper fraction to a mixed fraction
+
 ## Examples
 
     iex> Fraction.to_mixed(11, 2)
@@ -60,6 +64,7 @@ end
 
 @doc"""
 Returns the sum of two Fractions
+
 ## Examples
 
     iex> Fraction.add([2,3],[1,2])
@@ -76,6 +81,7 @@ end
 
 @doc"""
 Returns the difference of two Fractions
+
 ## Examples
 
     iex> Fraction.sub([2,3],[1,2])
@@ -91,6 +97,7 @@ end
 
 @doc"""
 Returns the product of two Fractions
+
 ## Examples
 
     iex> Fraction.mul([1,2], [3,4])
@@ -105,6 +112,7 @@ end
 
 @doc"""
 Returns the quotient of two Fractions
+
 ## Examples
 
     iex> Fraction.fdiv([1,2], [3,4])
@@ -120,6 +128,7 @@ end
 
 @doc"""
 Returns the reciprocal of a Fraction
+
 ## Examples
 
     iex> Fraction.reciprocal([3,4])
@@ -134,6 +143,7 @@ end
 
 @doc"""
 Returns the GCD(greatest common divisor) of two Fractions
+
 ## Examples
 
     iex> Fraction.fgcd([3,4], [1,2])
@@ -149,6 +159,7 @@ end
 
 @doc"""
 Returns the LCM(least common multiple) of two Fractions
+
 ## Examples
 
     iex> Fraction.flcm([3,4], [1,2])
@@ -164,6 +175,7 @@ end
 
 @doc"""
 Returns the decimal value of a given fraction
+
 ## Examples
 
     iex> Fraction.frac_to_dec([7, 2])
