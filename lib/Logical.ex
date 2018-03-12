@@ -15,6 +15,7 @@ defmodule Logic do
       [-1, 1, 2, 10]
 
   """
+  @spec logical_and(list, list) :: list
   def logical_and(arr1,arr2) do
     Enum.zip(arr1,arr2)
     |> Enum.map(fn{x, y} -> x && y end)
@@ -32,6 +33,7 @@ defmodule Logic do
 
 
   """
+  @spec logical_or(list, list) :: list
   def logical_or(arr1,arr2) do
     Enum.zip(arr1,arr2)
     |> Enum.map(fn{x, y} -> x || y end)
@@ -46,6 +48,7 @@ defmodule Logic do
       [false, true]
 
   """
+  @spec logical_not([boolean]) :: [boolean]
   def logical_not(arr) do
     Enum.map(arr, fn(x) -> !x end)
   end
@@ -58,7 +61,7 @@ defmodule Logic do
       iex> Logic.logical_xor([false, false, true, true],[false, true, false, true])
       [false, true, true, false]
   """
-
+  @spec logical_xor([boolean],[boolean]) :: [boolean]
   def logical_xor(arr1,arr2) do
     Enum.zip(arr1,arr2)
     |> Enum.map(fn{x, y} -> (x && !y) || (!x && y) end)

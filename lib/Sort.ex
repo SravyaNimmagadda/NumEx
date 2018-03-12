@@ -10,7 +10,9 @@ defmodule Sort do
       iex>  Sort.quicksort([195,99,78,12])
        [12, 78, 99, 195]]
   """
+  @spec quicksort([]) :: []
   def quicksort([]), do: []
+  @spec quicksort(list) :: list
   def quicksort([pivot | tail]) do
     {left, right} = Enum.split_with(tail, fn(x) -> x < pivot end)
     quicksort(left) ++ [pivot] ++ quicksort(right)
@@ -24,7 +26,7 @@ defmodule Sort do
       iex> Sort.lexsort([5, 3, 6, 8, 1], [0, 9, 4, 7, 2])
       [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   """
-
+  @spec lexsort(list, list) :: list
   def lexsort(list1, list2) do
     Enum.concat(list1, list2)
     |> Enum.sort
@@ -41,7 +43,7 @@ defmodule Sort do
       [[1, 2], [3, 5], [6, 7]]
 
   """
-
+  @spec sort(list, [integer]) :: [[integer]]
   def sort(list, axis) do
     cond do
       axis == 0 -> List.flatten(list)
@@ -60,6 +62,7 @@ defmodule Sort do
       [[0, 1], [3, 4], [5, 6]]
 
   """
+  @spec msort(list) :: list
   def msort(list), do: sort(list, 0)
 
 end

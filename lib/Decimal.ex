@@ -16,6 +16,7 @@ defmodule Decimal_ do
       iex> Decimal_.compare(4, 4)
       0
   """
+  @spec compare(integer, integer) :: integer
   def compare(n,m) do
       cond do
         n < m -> -1
@@ -40,7 +41,7 @@ defmodule Decimal_ do
        iex> Decimal_.compare_total(1, 1.0)
        -1
    """
-
+   @spec compare_total(integer, integer) :: integer
   def compare_total(n,m) do
        cond do
          n < m -> -1
@@ -62,6 +63,7 @@ defmodule Decimal_ do
       iex> Decimal_.is_signed(0)
       false
   """
+  @spec is_signed(integer) :: boolean
   def is_signed(n), do: n < 0
 
   @doc"""
@@ -74,6 +76,7 @@ defmodule Decimal_ do
       iex> Decimal_.abs(-32)
       32
   """
+  @spec abs(integer) :: integer
   def abs(n) do
       if n < 0 do  -n
       else n
@@ -87,7 +90,9 @@ defmodule Decimal_ do
   ## Examples
 
       iex> Decimal_.fma(2, 3, -5)
+      1
   """
+  @spec fma(integer, integer, integer) :: integer
   def fma(i, j, k) do
   i * j + k
   end

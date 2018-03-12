@@ -10,6 +10,7 @@ defmodule Count do
       iex> Count.count_nonzero([1,0,9,0,3,0,5])
       4
   """
+  @spec count_nonzero(list) :: integer
   def count_nonzero(l) do
     Enum.count(l, fn(x)  -> x != 0 end)
   end

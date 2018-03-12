@@ -14,6 +14,7 @@ defmodule MathematicalFunc do
       ["0.84", "0.91", "0.53", "-0.76", "-0.96"]
 
   """
+  @spec sin([integer]) :: [integer]
   def sin(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.sin(x), decimals: 2)  end)
 
   @doc"""
@@ -24,6 +25,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.sinh([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def sinh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.sinh(x), decimals: 2)  end)
   @doc"""
   Takes a list of elements and computes the asin function element wise .
@@ -33,6 +35,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.asin([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def asin(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.asin(x), decimals: 2)  end)
 
   @doc"""
@@ -43,7 +46,9 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.asin([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def asinh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.asinh(x), decimals: 2)  end)
+
   @doc"""
   Takes a list of elements and computes the cos function element wise .
 
@@ -52,6 +57,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.cos([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def cos(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.cos(x), decimals: 2)  end)
 
   @doc"""
@@ -72,6 +78,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.acos([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def acos(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.acos(x), decimals: 2)  end)
 
 
@@ -83,8 +90,8 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.acosh([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def acosh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.acosh(x), decimals: 2)  end)
-
 
   @doc"""
   Takes a list of elements and computes the tan function element wise .
@@ -94,6 +101,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.tan([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def tan(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.tan(x), decimals: 2)  end)
 
   @doc"""
@@ -104,6 +112,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.tanh([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def tanh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.tanh(x), decimals: 2)  end)
 
   @doc"""
@@ -114,6 +123,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.atan([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def atan(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.atan(x), decimals: 2)  end)
 
   @doc"""
@@ -124,6 +134,7 @@ defmodule MathematicalFunc do
       iex>MathematicalFunc.atanh([1,2,34,4,5])
 
   """
+  #@spec sinh([integer]) :: [integer]
   def atanh(list), do: Enum.map(list, fn x  -> :erlang.float_to_binary(:math.atanh(x), decimals: 2)  end)
 
   @doc"""
@@ -135,7 +146,7 @@ defmodule MathematicalFunc do
       5.0
 
   """
-
+  #@spec sinh([integer]) :: [integer]
   def hypot(s1, s2), do: :math.sqrt((s1 * s1) + (s2 * s2))
 
   @doc"""
@@ -147,7 +158,7 @@ defmodule MathematicalFunc do
       3.14159
 
   """
-
+  #@spec sinh([integer]) :: [integer]
   def deg2rad(degree), do: degree * (@pi / 180)
 
   @doc"""
@@ -159,7 +170,9 @@ defmodule MathematicalFunc do
       180
 
   """
+  #@spec sinh([integer]) :: [integer]
   def rad2deg(radian), do: radian * (180 / @pi)
+
   @doc"""
   Round elements of the array to the nearest integer.
 
@@ -169,7 +182,9 @@ defmodule MathematicalFunc do
       [4, 5, 6]
 
   """
+  #@spec sinh([integer]) :: [integer]
   def rint(list), do: Enum.map(list, fn x -> round(x) end)
+
   @doc"""
   Return the floor of the input, element-wise.
 
@@ -179,7 +194,9 @@ defmodule MathematicalFunc do
       [3.0, 4.0, 5.0]
 
   """
+  #@spec sinh([integer]) :: [integer]
   def floor(list), do: Enum.map(list, fn x -> Float.floor(x) end)
+
   @doc"""
   Return the ceiling of the input, element-wise.
 
@@ -189,7 +206,9 @@ defmodule MathematicalFunc do
       [4.0, 5.0, 6.0]
 
   """
+  #@spec sinh([integer]) :: [integer]
   def ceil(list), do: Enum.map(list, fn x -> Float.ceil(x) end)
+
   @doc"""
   Return the truncated value of the input, element-wise.
 
@@ -199,8 +218,11 @@ defmodule MathematicalFunc do
       [3, 4, 5]
 
   """
+  #@spec sinh([integer]) :: [integer]
   def truncate(list), do: Enum.map(list, fn x -> trunc(x) end)
+
   defp exponent(base, ex), do: :math.pow(base, ex)
+
   @doc"""
   Calculate the exponential of all elements in the input array.
 
@@ -210,7 +232,9 @@ defmodule MathematicalFunc do
       [7.38, 20.08, 148.41]
 
   """
+#  @spec sinh([integer]) :: [integer]
   def exp(list), do: Enum.map(list, fn x -> exponent(@e, x) end)
+
   @doc"""
   Calculate exp(x) - 1 for all elements in the array.
 
@@ -220,7 +244,9 @@ defmodule MathematicalFunc do
       [6.38, 19.08, 147.41]
 
   """
+#  @spec sinh([integer]) :: [integer]
   def exmp(list), do: Enum.map(list, fn x -> exponent(@e, x) - 1 end)
+
   @doc"""
   Calculate :math.pow(2, x) for all x in the input array.
 
@@ -231,7 +257,9 @@ defmodule MathematicalFunc do
 
 
   """
+#  @spec sinh([integer]) :: [integer]
   def exp2(list), do: Enum.map(list, fn x -> exponent(2, x) end)
+
   @doc"""
   Natural logarithm, element-wise.
 
@@ -241,7 +269,9 @@ defmodule MathematicalFunc do
       [0.47, 0.60, 0.69, 0.90]
 
   """
+#  @spec sinh([integer]) :: [integer]
   def log(list), do: Enum.map(list, fn x -> :math.log(x) end)
+
   @doc"""
   Return the base 10 logarithm of the input array, element-wise.
 
@@ -251,7 +281,9 @@ defmodule MathematicalFunc do
       [1.0, 2.0, 3.0]
 
   """
+#  @spec log10([integer]) :: [float]
   def log10(list), do: Enum.map(list, fn x -> :math.log10(x) end)
+
   @doc"""
   Base-2 logarithm of x for all x in input array.
 
@@ -261,7 +293,9 @@ defmodule MathematicalFunc do
       [1.0, 2.0, 3.0]
 
   """
+#  @spec log2([integer]) :: [float]
   def log2(list), do: Enum.map(list, fn x -> :math.log2(x) end)
+
   @doc"""
   Logarithm of the sum of exponentiations of the inputs.
 
@@ -271,7 +305,9 @@ defmodule MathematicalFunc do
       10.006
 
   """
+#  @spec logaddexp(integer, integer) :: float
   def logaddexp(x1, x2), do: :math.log(exponent(@e, x1) + exponent(@e, x2))
+
   @doc"""
   Logarithm of the sum of exponentiations of the inputs in base-2.
 
@@ -281,7 +317,9 @@ defmodule MathematicalFunc do
       2.48
 
   """
+#  @spec logaddexp2(integer, integer) :: float
   def logaddexp2(x1, x2), do: :math.log(exponent(2, x1) + exponent(2, x2))
+
   @doc"""
   Return the natural logarithm of one plus the input array, element-wise.
 
@@ -291,7 +329,9 @@ defmodule MathematicalFunc do
         [1.61, 1.79, 2.07, 2.19]
 
   """
+#  @spec log1p([integer]) :: [float]
   def log1p(list), do: Enum.map(list, fn x -> :math.log(x + 1) end)
+
   @doc"""
   Add arguments element-wise.
 
@@ -301,7 +341,9 @@ defmodule MathematicalFunc do
       8200
 
   """
+#  @spec add([integer]) :: [integer]
   def add(list), do: Enum.sum(list)
+
   @doc"""
   Return the sinc function.
 
@@ -311,6 +353,7 @@ defmodule MathematicalFunc do
       [-0.09, -0.03, -0.09, 0.06]
 
   """
+#  @spec sinc([integer]) :: [integer]
   def sinc(list), do:  Enum.map(list, fn x -> :math.sin(@e * x)/(@e * x) end)
 
 end

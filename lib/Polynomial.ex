@@ -29,6 +29,7 @@ defmodule Polynomial do
       [2, 4, 12]
 
   """
+  @spec polyadd(list, list) :: list
   def polyadd(a, b) do
      list2 = main(a, b)
      list1 = List.zip([Enum.reverse(a), Enum.reverse(b)])
@@ -48,7 +49,7 @@ defmodule Polynomial do
       iex> Polynomial.polysub([2, 3, 7], [1, 5, 9])
       [1, -2, -2]
   """
-
+  @spec polysub(list, list) :: list
   def polysub(a, b) do
      list2 = main(a, b)
      list1 = List.zip([Enum.reverse(a), Enum.reverse(b)])
@@ -68,7 +69,7 @@ defmodule Polynomial do
       iex> Polynomial.polymul([5, 1, 3], [-1, 2])
       [-5, 9, -1, 6]
   """
-
+  @spec polymul(list, list) :: list
   def polymul(a, b) do
      degree1 = Enum.count(a) - 1
      degree2 = Enum.count(b) - 1
@@ -90,7 +91,7 @@ defmodule Polynomial do
       iex> Polynomial.polymulx([4, 5, -2], 2)
       [8, 10, -4]
   """
-
+  @spec polymulx(list, integer) :: list
   def polymulx(poly, x), do: Enum.map(poly, fn(m) -> m * x end)
 
   @doc"""
@@ -102,6 +103,7 @@ defmodule Polynomial do
       {[2, 1], [1]}
 
   """
+  @spec polydiv(list, list) :: {list, list}
   def polydiv(_, []), do: raise ArgumentError, "denominator is zero"
   def polydiv(_, [0]), do: raise ArgumentError, "denominator is zero"
   def polydiv(f, g) when length(f) < length(g), do: {[0], f}
@@ -130,7 +132,7 @@ defmodule Polynomial do
       iex> Polynomial.polyder([6, -1, 3, 2])
       [18, -2, 3]
   """
-
+  @spec polyder(list) :: list
   def polyder(a) do
     degree = Enum.count(a) - 1
     a |> Enum.with_index
@@ -147,6 +149,7 @@ defmodule Polynomial do
       [36, 1, 9]
 
   """
+  @spec polyadd(list, integer) :: list
   def polypow(polynomial, power) do
     Enum.map(polynomial, fn(x) -> round(:math.pow(x, power)) end)
   end

@@ -9,7 +9,7 @@ defstruct [:numerator, :denominator]
 
 
 @doc"""
-Gives a fration structure to a value.
+Gives a fration structure to the given value.
 
 ## Examples
 
@@ -18,7 +18,6 @@ Gives a fration structure to a value.
     iex> Fraction.new(-3)
     %Fraction{denominator: 1, numerator: -3}
 """
-
 def new(x), do: %Fraction{numerator: x, denominator: 1}
 @doc"""
 Gives a fration structure to a value.

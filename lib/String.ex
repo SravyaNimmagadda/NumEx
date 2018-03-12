@@ -10,6 +10,7 @@ defmodule StringManipulations do
       iex> StringManipulations.add("Elixir", "Lang")
       ["EL", "la", "in", "xg"]
   """
+  @spec add(String.t, String.t) :: list
   def add(s1, s2) do
     Enum.zip(String.graphemes(s1), String.graphemes(s2)) |>
     Enum.map(fn x -> Tuple.to_list(x) end) |>
@@ -26,6 +27,7 @@ defmodule StringManipulations do
       ["EEE", "lll", "iii", "xxx", "iii", "rrr"]
 
   """
+  @spec multiply(String.t, integer) :: list
   def multiply(s1, n) do
     cond do
       n === 0 -> ""
@@ -44,6 +46,7 @@ defmodule StringManipulations do
       iex> StringManipulations.center("Elixir", 5)
       "Elixi"
   """
+  @spec center(String.t, integer) :: String.t
   def center(s1, n) do
     String.graphemes(s1) |>
     Enum.take(n) |>
@@ -58,6 +61,7 @@ defmodule StringManipulations do
       iex> StringManipulations.join("Elixir", "Lang")
       "LElixiraElixirnElixirg"
   """
+  @spec join(String.t, String.t) :: String.t
   def join(s1, seq) do
     k = String.graphemes(seq)
     s = Enum.take(k, String.length(seq) -1) |>
