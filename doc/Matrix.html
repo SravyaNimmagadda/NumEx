@@ -8,7 +8,7 @@
     <title>Matrix – NumEx v0.1.0</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-03fdeb5ee1.js"></script>
+    <script src="dist/sidebar_items-79155b7eb4.js"></script>
     
     
     
@@ -109,10 +109,28 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#colRemove/2">colRemove(mat, j)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Removes the column j from the matrix</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#columncount/1">columncount(list)</a>
   </div>
   
     <div class="summary-synopsis"><p>Takes matrix and returns number of columns in the given matrix</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#det/1">det(mat)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Computes the determinant of a matrix</p>
 </div>
   
 </div>
@@ -172,6 +190,15 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#rowRemove/2">rowRemove(mat, i)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Removes the row i from the matrix</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#rowcount/1">rowcount(row)</a>
   </div>
   
@@ -203,6 +230,26 @@
   </div>
   
     <div class="summary-synopsis"><p>Performs elementwise subtraction</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#submatrix/3">submatrix(mat, i, j)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the (i, j) submatrix of a matrix. This is the matrix with the
+i<sup>th</sup> row and j<sup>th</sup> column removed</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#trace/1">trace(mat)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Computes the the trace of a matrix. This is the sum of the elements accross the
+diagonal of a matrix</p>
 </div>
   
 </div>
@@ -281,6 +328,42 @@
 
   </section>
 </div>
+<div class="detail" id="colRemove/2">
+  
+  
+  <div class="detail-header">
+    <a href="#colRemove/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">colRemove(mat, j)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L237" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>colRemove([[number()]], number()) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Removes the column j from the matrix.</p>
+<h2 id="colRemove/2-examples" class="section-heading">
+  <a href="#colRemove/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.colRemove([[2, 9, 4], [8, 7, 6], [3, 1, 5]], 2)
+[[2, 4], [8, 6], [3, 5]]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="columncount/1">
   
   
@@ -314,6 +397,41 @@
 
 <pre><code class="iex elixir">iex&gt; Matrix.colcount([[12,34,56,11],[98,78,67,0],[0,34,78,9]])
 4</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="det/1">
+  
+  
+  <div class="detail-header">
+    <a href="#det/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">det(mat)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L250" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>det([[number()]]) :: number()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Computes the determinant of a matrix.</p>
+<h2 id="det/1-examples" class="section-heading">
+  <a href="#det/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<p>   iex&gt; Matrix.det([[6, 2, 1], [4, 3, 5], [2, 0, 7]])</p>
 
   </section>
 </div>
@@ -535,6 +653,42 @@ iex&gt; Matrix.eye(3, 3, -1)
 
   </section>
 </div>
+<div class="detail" id="rowRemove/2">
+  
+  
+  <div class="detail-header">
+    <a href="#rowRemove/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">rowRemove(mat, i)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L224" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>rowRemove([[number()]], number()) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Removes the row i from the matrix.</p>
+<h2 id="rowRemove/2-examples" class="section-heading">
+  <a href="#rowRemove/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.rowRemove([[2, 9, 4], [8, 7, 6], [3, 1, 5]], 1)
+[[8, 7, 6], [3, 1, 5]]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="rowcount/1">
   
   
@@ -678,6 +832,80 @@ iex&gt; Matrix.eye(3, 3, -1)
 <pre><code class="iex elixir">iex&gt; Matrix.sub([[1, 2, 3],[1, 2, 2]],[[1, 2, 3],[2, 2, 2]])
 [[0, 0, 0],
 [-1, 0, 0]]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="submatrix/3">
+  
+  
+  <div class="detail-header">
+    <a href="#submatrix/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">submatrix(mat, i, j)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L210" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>submatrix([[number()]], number(), number()) :: [[number()]]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the (i, j) submatrix of a matrix. This is the matrix with the
+i<sup>th</sup> row and j<sup>th</sup> column removed.</p>
+<h2 id="submatrix/3-examples" class="section-heading">
+  <a href="#submatrix/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.submatrix([[2, 9, 4], [8, 7, 6], [3, 1, 5]], 2, 3)
+[[2, 9], [3, 1]]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="trace/1">
+  
+  
+  <div class="detail-header">
+    <a href="#trace/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">trace(mat)</span>
+    
+      <a href="https://gitlab.com/MahathiVavilala/numex/blob/master/lib/Matrix.ex#L265" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>trace([[number()]]) :: number()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Computes the the trace of a matrix. This is the sum of the elements accross the
+diagonal of a matrix.</p>
+<h2 id="trace/1-examples" class="section-heading">
+  <a href="#trace/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Matrix.trace([[6, 1, 1], [4, -2, 5], [2, 8, 7]])
+11</code></pre>
 
   </section>
 </div>

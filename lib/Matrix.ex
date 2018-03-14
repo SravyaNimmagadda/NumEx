@@ -197,11 +197,83 @@ defmodule Matrix do
     Enum.map(m1, fn(row) -> Enum.map(row, fn(x) -> x * s end) end)
   end
 
-  defp addLists(m1, m2) do
-    for {a, b} <- Enum.zip(m1, m2), do: a + b
+  @doc"""
+  Returns the (i, j) submatrix of a matrix. This is the matrix with the
+  i<sup>th</sup> row and j<sup>th</sup> column removed.
+
+  ## Examples
+
+      iex> Matrix.submatrix([[2, 9, 4], [8, 7, 6], [3, 1, 5]], 2, 3)
+      [[2, 9], [3, 1]]
+  """
+  @spec submatrix([[number]], number, number) :: [[number]]
+  def submatrix(mat, i, j) do
+    rowRemove(mat, i) |> colRemove(j)
   end
 
-  defp subLists(m1, m2) do
-    addLists(m1, Enum.map(m2, fn(x) -> -x end))
+  @doc"""
+  Removes the row i from the matrix.
+
+  ## Examples
+
+      iex> Matrix.rowRemove([[2, 9, 4], [8, 7, 6], [3, 1, 5]], 1)
+      [[8, 7, 6], [3, 1, 5]]
+
+  """
+  @spec rowRemove([[number]], number) :: [[number]]
+  def rowRemove(mat, i) do
+    List.delete_at(mat, i - 1)
   end
+
+  @doc"""
+  Removes the column j from the matrix.
+
+  ## Examples
+
+      iex> Matrix.colRemove([[2, 9, 4], [8, 7, 6], [3, 1, 5]], 2)
+      [[2, 4], [8, 6], [3, 5]]
+  """
+  @spec colRemove([[number]], number) :: [[number]]
+  def colRemove(mat, j) do
+    Enum.map(mat, fn x -> (List.delete_at(x, j - 1)) end)
+  end
+
+  @doc"""
+  Computes the determinant of a matrix.
+
+  ## Examples
+
+     iex> Matrix.det([[6, 2, 1], [4, 3, 5], [2, 0, 7]])
+
+  """
+  @spec det([[number]]) :: number
+  def det([h | _] = mat) do
+     Enum.with_index(h)
+     |> List.foldl(0, fn({ele, index}, acc) -> acc +  ele * cofactor(mat, 1, index + 1) end)
+  end
+
+  @doc"""
+  Computes the the trace of a matrix. This is the sum of the elements accross the
+  diagonal of a matrix.
+
+  ## Examples
+
+      iex> Matrix.trace([[6, 1, 1], [4, -2, 5], [2, 8, 7]])
+      11
+  """
+  @spec trace([[number]]) :: number
+  def trace(mat) do
+     Enum.with_index(mat)
+     |> Enum.map(fn({row, index}) -> Enum.at(row, index) end)
+     |> Enum.sum
+  end
+
+  defp cofactor(mat, i, j), do: minor(mat, i, j) * :math.pow(-1, i + j)
+
+  defp minor(mat, i, j), do:  submatrix(mat, i, j) |> det
+
+  defp addLists(m1, m2), do: for {a, b} <- Enum.zip(m1, m2), do: a + b
+
+  defp subLists(m1, m2), do: addLists(m1, Enum.map(m2, fn(x) -> -x end))
+
 end
